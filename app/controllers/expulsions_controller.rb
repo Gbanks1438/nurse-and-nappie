@@ -1,0 +1,2 @@
+class ExpulsionsController < ApplicationController
+end
