@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 2022_04_18_221050) do
   create_table "babies", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
+    t.string "gender"
     t.time "birth_date"
-    t.integer "birth_weight"
-    t.integer "birth_height"
+    t.string "birth_weight"
+    t.string "birth_height"
     t.boolean "breastfed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
