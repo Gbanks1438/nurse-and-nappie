@@ -1,23 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
+import LoggedIn from './LoggedIn.js';
+import LoggedOut from './LoggedOut.js';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [user, setUser] = useState(null);
+  const [authenticated, setAuthenticated] = useState(false);
+
+  useEffect(() => {
+    fetch("/me", {
+      credentials: "include",
+    }).then((res) => {
+      if (res.ok) {
+        res.json().then((user) => {
+          setUser(user);
+          setAuthenticated(true);
+        });
+      } else {
+        setAuthenticated(true);
+      }
+    });
+  }, []);
+  
+  if (!authenticated) {
+    return (<div>
+      <LoggedOut 
+      setUser={setUser} 
+          />
+      </div>)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {user ? (
+          <LoggedIn
+            setUser={setUser}
+            user={user}
+          />
+        ) : (
+          <LoggedOut setUser={setUser} 
+          />
+          )}
     </div>
   );
 }

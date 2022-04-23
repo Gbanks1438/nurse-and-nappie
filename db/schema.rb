@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 2022_04_18_221050) do
   create_table "babies", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "gender"
-    t.time "birth_date"
+    t.string "sex"
+    t.datetime "birth_date"
     t.string "birth_weight"
     t.string "birth_height"
     t.boolean "breastfed"
@@ -28,9 +28,11 @@ ActiveRecord::Schema.define(version: 2022_04_18_221050) do
   end
 
   create_table "expulsions", force: :cascade do |t|
-    t.time "date"
-    t.time "time"
+    t.date "date"
+    t.datetime "time"
     t.string "movement_type"
+    t.boolean "diaper_changed"
+    t.string "diaper_size"
     t.string "movement_volume"
     t.string "movement_color"
     t.string "consistency"
@@ -41,8 +43,8 @@ ActiveRecord::Schema.define(version: 2022_04_18_221050) do
   end
 
   create_table "meals", force: :cascade do |t|
-    t.time "time_start"
-    t.time "time_end"
+    t.datetime "time_start"
+    t.datetime "time_end"
     t.string "which_breast"
     t.bigint "baby_id", null: false
     t.datetime "created_at", precision: 6, null: false
