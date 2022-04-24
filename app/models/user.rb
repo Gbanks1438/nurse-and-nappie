@@ -1,6 +1,8 @@
 class User < ApplicationRecord
 	has_secure_password
 
+	has_many :babies, dependent: :delete_all
+
     validates :username, :email, presence: true, uniqueness: true, length: { minimum: 3, maximum: 256 }
     validates :password, presence: true, confirmation: { case_sensitive: true }, length: { minimum: 6}
     validates :first_name, :last_name, presence: true, length: { minimum: 2, maximum: 25 }

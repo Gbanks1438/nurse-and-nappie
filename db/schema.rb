@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_18_221050) do
+ActiveRecord::Schema.define(version: 2022_04_24_173051) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,24 +18,27 @@ ActiveRecord::Schema.define(version: 2022_04_18_221050) do
   create_table "babies", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "sex"
-    t.datetime "birth_date"
+    t.string "gender"
+    t.time "birth_date"
     t.string "birth_weight"
     t.string "birth_height"
     t.boolean "breastfed"
+    t.string "profile_image"
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_babies_on_user_id"
   end
 
   create_table "expulsions", force: :cascade do |t|
-    t.date "date"
-    t.datetime "time"
+    t.time "date"
     t.string "movement_type"
     t.boolean "diaper_changed"
     t.string "diaper_size"
-    t.string "movement_volume"
-    t.string "movement_color"
+    t.string "volume"
+    t.string "color"
     t.string "consistency"
+    t.integer "num_wipes_used"
     t.bigint "baby_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -43,13 +46,23 @@ ActiveRecord::Schema.define(version: 2022_04_18_221050) do
   end
 
   create_table "meals", force: :cascade do |t|
-    t.datetime "time_start"
-    t.datetime "time_end"
+    t.time "time_start"
+    t.time "time_end"
     t.string "which_breast"
+    t.boolean "vitamin_d"
     t.bigint "baby_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["baby_id"], name: "index_meals_on_baby_id"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.string "comments"
+    t.time "date"
+    t.bigint "baby_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["baby_id"], name: "index_notes_on_baby_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -58,10 +71,13 @@ ActiveRecord::Schema.define(version: 2022_04_18_221050) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "profile_image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "babies", "users"
   add_foreign_key "expulsions", "babies"
   add_foreign_key "meals", "babies"
+  add_foreign_key "notes", "babies"
 end

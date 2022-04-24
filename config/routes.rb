@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
-  #Calling resources will utilize all associated actions [:index, :show, :new, :edit, :update, :destroy]
+  # Calling resources will utilize all associated actions [:index, :show, :new, :edit, :update, :destroy]
   resources :expulsions, only: [:index, :show, :new, :edit, :update]
   resources :meals, only: [:index, :show, :new, :edit, :update]
-  resources :babies
+  resources :babies, only: [:index, :show, :new, :edit, :update]
+  resources :notes, only: [:index, :show, :new, :edit, :update]
   resources :users
 
-  # Custome Routes
+  # Custom Routes
   post "/login", to: "sessions#login" #200 OK
   delete "/logout", to: "sessions#logout" #204 No Content
   get "/me", to: "users#show" #200 OK
