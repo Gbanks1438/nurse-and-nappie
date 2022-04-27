@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :vaccines
-  resources :monthly_milestones
   # Calling resources will utilize all associated actions [:index, :show, :new, :edit, :update, :destroy]
+  resources :vaccines, only: [:index, :show, :new, :edit, :update]
+  resources :monthly_milestones, only: [:index, :show, :new, :edit, :update]
   resources :expulsions, only: [:index, :show, :new, :edit, :update]
   resources :meals, only: [:index, :show, :new, :edit, :update]
   resources :babies, only: [:index, :show, :new, :edit, :update]
