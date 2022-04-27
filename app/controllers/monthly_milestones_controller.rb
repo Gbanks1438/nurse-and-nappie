@@ -8,7 +8,7 @@ class MonthlyMilestonesController < ApplicationController
         if monthlymilestone
             render json: monthlymilestone
         else
-            render json: {"error": "MonthlyMilestones not found"}, status: :not_found
+            render json: {error: "Monthly Milestone not found"}, status: :not_found
         end
     end
 
@@ -27,7 +27,7 @@ class MonthlyMilestonesController < ApplicationController
                 current_monthlymilestone.update(monthlymilestone_params)
         render json: current_monthlymilestone
         else
-          render json: { error: "MonthlyMilestone not found" }, status: :not_found
+          render json: { error: "Monthly Milestone not found" }, status: :not_found
         end
     end
 

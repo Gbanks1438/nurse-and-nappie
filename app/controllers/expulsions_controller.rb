@@ -8,7 +8,7 @@ class ExpulsionsController < ApplicationController
         if expulsion
             render json: expulsion
         else
-            render json: {"error": "Expulsion not found"}, status: :not_found
+            render json: {error: "Expulsion not found"}, status: :not_found
         end
     end
 

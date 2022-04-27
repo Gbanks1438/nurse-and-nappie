@@ -8,7 +8,7 @@ class VaccinesController < ApplicationController
         if vaccine
             render json: vaccine
         else
-            render json: {"error": "Vaccines not found"}, status: :not_found
+            render json: {error: "Vaccine not found"}, status: :not_found
         end
     end
 

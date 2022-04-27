@@ -8,7 +8,7 @@ class BabiesController < ApplicationController
         if baby
             render json: baby
         else
-            render json: {"error": "Baby not found"}, status: :not_found
+            render json: {error: "Baby not found"}, status: :not_found
         end
     end
 

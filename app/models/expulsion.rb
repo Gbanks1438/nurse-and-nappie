@@ -10,7 +10,7 @@ class Expulsion < ApplicationRecord
 
   #validates :diaper_size, inclusion: { in: %w(N/A, New Born, 1, 2, 3, 4, 5, 6, Pull-Ups), message: "%{value} is not a valid selection” }
 
-  #validates :volume, inclusion: { in: %w(Small, Medium, Large, Very Large), message: "%{value} is not a valid selection” }
+  #validates :volume, inclusion: { in: %w(Comfort Change, Small, Medium, Large, Very Large), message: "%{value} is not a valid selection” }
 
   #validates :color, inclusion: { in: %w(Grey, White, Clear, Yellow, Mustard, Green, Brown, Red, Orange, Black), message: "%{value} is not a valid selection” }
 

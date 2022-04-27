@@ -8,7 +8,7 @@ class MealsController < ApplicationController
         if meal
             render json: meal
         else
-            render json: {"error": "Meal not found"}, status: :not_found
+            render json: {error: "Meal not found"}, status: :not_found
         end
     end
 

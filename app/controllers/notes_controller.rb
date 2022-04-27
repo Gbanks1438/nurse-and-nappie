@@ -8,7 +8,7 @@ class NotesController < ApplicationController
         if note
             render json: note
         else
-            render json: {"error": "Comments not found"}, status: :not_found
+            render json: {error: "Comment not found"}, status: :not_found
         end
     end
 
