@@ -7,6 +7,7 @@ class CreateVaccines < ActiveRecord::Migration[6.1]
       t.string :dose
       t.string :method
       t.string :notes
+      
       t.belongs_to :baby, null: false, foreign_key: true
 
       t.timestamps

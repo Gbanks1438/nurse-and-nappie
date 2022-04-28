@@ -5,6 +5,7 @@ class CreateMonthlyMilestones < ActiveRecord::Migration[6.1]
       t.string :weight
       t.string :height
       t.string :development_notes
+      
       t.belongs_to :baby, null: false, foreign_key: true
 
       t.timestamps
