@@ -1,7 +1,7 @@
 class CreateExpulsions < ActiveRecord::Migration[6.1]
   def change
     create_table :expulsions do |t|
-      t.time :date
+      t.time :exp_date
       t.string :movement_type
       t.boolean :diaper_changed
       t.string :diaper_size

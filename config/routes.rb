@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   #NOT WORKING
   resources :vaccines, only: [:index, :show, :new, :edit, :update]
   resources :monthlymilestones, only: [:index, :show, :new, :edit, :update]
-  resources :babies, only: [:index, :show, :new, :edit, :update]
   #WORKING
+  resources :babies, only: [:index, :show, :new, :edit, :update]
   resources :expulsions, only: [:index, :show, :new, :edit, :update]
   resources :meals, only: [:index, :show, :new, :edit, :update]
   resources :notes, only: [:index, :show, :new, :edit, :update]
@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   #delete "/me", to: "users#destroy" #204 No Content
   #patch "/signup", to: "users#update" #200 OK
 
-  #get "/", to: "babies#show" <-- NOT NECESSARY
+  #get "/", to: "babies#show" #<-- NOT NECESSARY
 
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

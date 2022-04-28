@@ -1,4 +1,4 @@
 class NoteSerializer < ActiveModel::Serializer
-  attributes :id, :comments, :date
+  attributes :id, :note_date, :comments
   has_one :baby
 end

@@ -1,7 +1,7 @@
 class CreateMonthlyMilestones < ActiveRecord::Migration[6.1]
   def change
     create_table :monthly_milestones do |t|
-      t.time :date
+      t.time :ms_date
       t.string :weight
       t.string :height
       t.string :development_notes

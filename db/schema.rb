@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 2022_04_27_182243) do
   enable_extension "plpgsql"
 
   create_table "babies", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "b_first_name"
+    t.string "b_last_name"
     t.string "gender"
     t.time "birth_date"
     t.string "birth_weight"
     t.string "birth_height"
     t.boolean "breastfed"
-    t.string "profile_image"
+    t.string "baby_profile"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 2022_04_27_182243) do
   end
 
   create_table "expulsions", force: :cascade do |t|
-    t.time "date"
+    t.time "exp_date"
     t.string "movement_type"
     t.boolean "diaper_changed"
     t.string "diaper_size"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 2022_04_27_182243) do
   end
 
   create_table "monthly_milestones", force: :cascade do |t|
-    t.time "date"
+    t.time "ms_date"
     t.string "weight"
     t.string "height"
     t.string "development_notes"
@@ -68,8 +68,8 @@ ActiveRecord::Schema.define(version: 2022_04_27_182243) do
   end
 
   create_table "notes", force: :cascade do |t|
+    t.time "note_date"
     t.string "comments"
-    t.time "date"
     t.bigint "baby_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -79,21 +79,21 @@ ActiveRecord::Schema.define(version: 2022_04_27_182243) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "first_name"
-    t.string "last_name"
+    t.string "usr_first_name"
+    t.string "usr_last_name"
     t.string "email"
-    t.string "profile_image"
+    t.string "usr_profile"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "vaccines", force: :cascade do |t|
-    t.time "date"
+    t.time "vax_date"
     t.string "vaccine"
     t.string "abbreviation"
     t.string "dose"
     t.string "method"
-    t.string "notes"
+    t.string "vax_notes"
     t.bigint "baby_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

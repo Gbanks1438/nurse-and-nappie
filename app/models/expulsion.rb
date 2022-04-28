@@ -1,7 +1,7 @@
 class Expulsion < ApplicationRecord
   belongs_to :baby
 
-  validates :date, :movement_type, :diaper_changed, :diaper_size, :volume, :color, :consistency, :num_wipes_used, presence: true
+  validates :exp_date, :movement_type, :diaper_changed, :diaper_size, :volume, :color, :consistency, :num_wipes_used, presence: true
   validates :num_wipes_used, :numericality => { :greater_than_or_equal_to => 0 }
 
   #validates :movement_type, inclusion: { in: %w(Urine, Feces, Vomit), message: "%{value} is not a valid selection” }
