@@ -1,8 +1,8 @@
-//import { LineChart, Line } from 'recharts';
+import { LineChart, Line, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 function Chart() {
 
-/*     const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}];
+    const data = [{name: 'Page A', uv: 400, pv: 2400, amt: 2400}];
 
     const renderLineChart = (
         <LineChart width={600} height={300} data={data}>
@@ -11,7 +11,7 @@ function Chart() {
             <XAxis dataKey="name" />
             <YAxis />
         </LineChart>
-    ); */
+    );
 
     return (
         <div>
