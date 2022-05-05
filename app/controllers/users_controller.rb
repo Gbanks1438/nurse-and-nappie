@@ -1,15 +1,16 @@
 class UsersController < ApplicationController
-    #skip_before_action :authenticate_user, only: [:create, :show]
+    skip_before_action :authenticate_user, only: [:create, :show]
     
     def index
         render json: User.all
     end
 
     def show
+        current_user = User.find_by_id(params[:id])
         if current_user
             render json: current_user, status: :ok
         else
-            render json: {error: "User is not logged in"}, status: :unauthorized
+            render json: {error: "User not found"}, status: :unauthorized
         end
     end
 
@@ -40,7 +41,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:username, :password, :password_confirmation, :first_name, :last_name, :email, :profile_image)
+        params.permit(:username, :password, :password_confirmation, :usr_first_name, :usr_last_name, :email, :usr_profile)
     end
     
 end

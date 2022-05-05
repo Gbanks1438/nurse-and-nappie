@@ -1,5 +1,5 @@
-MonthlyMilestone.destroy_all
 Vaccine.destroy_all
+Milestone.destroy_all
 Note.destroy_all
 Expulsion.destroy_all
 Meal.destroy_all
@@ -16,7 +16,7 @@ puts "🌱🌱🌱 Seeding Users…"
 user1= User.create(username: 'Testing', password: 'Test123$', usr_first_name: 'Testo', usr_last_name: 'Testerson', email: 'noone@nowhere.com', usr_profile: 'https://www.thepaleomom.com/wp-content/uploads/2017/02/Generic-Marketing-86-360x270.jpg')
 
 puts "🌱🌱🌱 Seeding Babies…"
-baby1 = Baby.create(b_first_name: 'Mina', b_last_name: 'Banks', gender: 'Female', birth_date: Time.new(2022, 02, 17, 2, 59, 00, "-04:00"), birth_weight: '7lbs 5oz', birth_height: '17.7in', breastfed: true, baby_profile: 'https://i.pinimg.com/originals/b2/b9/8d/b2b98db865e5ebf461cde0138821f0ec.jpg', user_id: 1)
+baby1 = Baby.create(b_first_name: 'Mina', b_last_name: 'Banks', gender: 'Female', birth_date: Time.new(2022, 02, 17, 02, 59, 00), birth_weight: '7lbs 5oz', birth_height: '17.7in', breastfed: true, baby_profile: 'https://i.pinimg.com/originals/b2/b9/8d/b2b98db865e5ebf461cde0138821f0ec.jpg', user_id: 1)
 
 puts "🌱🌱🌱 Seeding Meals…"
 meal1 = Meal.create(time_start: Time.new(2022, 02, 17, 6, 00, 00, "-04:00"), time_end: Time.new(2022, 02, 17, 6, 10, 00, "-04:00"), which_breast: 'Left', vitamin_d: true, baby_id: 1)
@@ -35,9 +35,9 @@ note2 = Note.create(note_date: Time.new(2022, 03, 31, 14, 00, 00, "-04:00"), com
 note3 = Note.create(note_date: Time.new(2022, 04, 07, 14, 00, 00, "-04:00"), comments: 'Mina has started to track movement with her eyes', baby_id: 1)
 note4 = Note.create(note_date: Time.new(2022, 04, 14, 14, 00, 00, "-04:00"), comments: 'Mina has started to coo and make vocalizations', baby_id: 1)
 
-puts "🌱🌱🌱 Seeding Monthly Milestones…"
-monthlymilestone1 = MonthlyMilestone.create(ms_date: Time.new(2022, 03, 17, 12, 00, 00, "-04:00"), weight: '8lbs 2oz', height: '19.4in', development_notes: 'Mina is below the 50th percentile for both Weight and Height', baby_id: 1)
-monthlymilestone2 = MonthlyMilestone.create(ms_date: Time.new(2022, 04, 17, 12, 00, 00, "-04:00"), weight: '9lbs 1oz', height: '22.5in', development_notes: 'Mina is below the 50th percentile for both Weight and Height', baby_id: 1)
+puts "🌱🌱🌱 Seeding Milestones…"
+milestone1 = Milestone.create(ms_date: Time.new(2022, 03, 17, 12, 00, 00, "-04:00"), weight: '8lbs 2oz', height: '19.4in', development_notes: 'Mina is below the 50th percentile for both Weight and Height', baby_id: 1)
+milestone2 = Milestone.create(ms_date: Time.new(2022, 04, 17, 12, 00, 00, "-04:00"), weight: '9lbs 1oz', height: '22.5in', development_notes: 'Mina is below the 50th percentile for both Weight and Height', baby_id: 1)
 
 puts "🌱🌱🌱 Seeding Vaccines…"
 vaccine1 = Vaccine.create(vax_date: Time.new(2022, 02, 17, 6, 00, 00, "-04:00"), vaccine: 'Phenylketonuria', abbreviation: 'PKU', dose: '1st', method: 'Subcutaneous Injection', vax_notes: 'Standard newborn Heel Stick Test.', baby_id: 1)

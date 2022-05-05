@@ -1,4 +1,4 @@
-class MonthlyMilestone < ApplicationRecord
+class Milestone < ApplicationRecord
   belongs_to :baby
 
   validates :ms_date, :weight, :height, presence: true

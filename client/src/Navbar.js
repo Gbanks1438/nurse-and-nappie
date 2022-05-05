@@ -22,7 +22,10 @@ function Navbar({setUser}) {
                     <NavLink to='/'>Home</NavLink>
                 </li>
                 <li className='nav-links'>
-                    <NavLink to='/chart'>Charts</NavLink>
+                    <NavLink to='/charts'>Charts</NavLink>
+                </li>
+                <li className='nav-links'>
+                    <NavLink to='/baby'>Baby</NavLink>
                 </li>
                 <button className="Logout-button" onClick={handleLogout}>Logout</button>
             </ul>

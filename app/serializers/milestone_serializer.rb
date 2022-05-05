@@ -1,4 +1,4 @@
-class MonthlyMilestoneSerializer < ActiveModel::Serializer
+class MilestoneSerializer < ActiveModel::Serializer
   attributes :id, :ms_date, :weight, :height, :development_notes
   has_one :baby
 end

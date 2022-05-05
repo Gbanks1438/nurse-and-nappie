@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-    #skip_before_action :authenticate_user, only: [:login]
+    skip_before_action :authenticate_user, only: [:login]
   
       def login
         # byebug

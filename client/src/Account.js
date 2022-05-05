@@ -35,9 +35,10 @@ function Account({setUser}) {
         username: "",
         password: "",
         password_confirmation: "",
-        first_name: "",
-        last_name: "",
-        email: ""
+        usr_first_name: "",
+        usr_last_name: "",
+        email: "",
+        usr_profile: ""
       });
     });
   }
@@ -87,21 +88,21 @@ function Account({setUser}) {
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="first_name">First Name:</label>
+        <label htmlFor="usr_first_name">First Name:</label>
         <input
           id="account-input"
           type="text"
-          name="first_name"
-          value={formData.first_name}
+          name="usr_first_name"
+          value={formData.usr_first_name}
           onChange={handleChange}
         />
         <br />
-        <label htmlFor="last_name">Last Name:</label>
+        <label htmlFor="usr_last_name">Last Name:</label>
         <input
           id="account-input"
           type="text"
-          name="last_name"
-          value={formData.last_name}
+          name="usr_last_name"
+          value={formData.usr_last_name}
           onChange={handleChange}
         />
         <br />
@@ -114,6 +115,15 @@ function Account({setUser}) {
           onChange={handleChange}
         />
       <br />
+      <label htmlFor="usr_profile">Profile Image:</label>
+        <input
+          id="account-input"
+          type="text"
+          name="usr_profile"
+          value={formData.usr_profile}
+          onChange={handleChange}
+        />
+      <br/>
       <br/>
       <button type="submit" className="Update-button">Update</button>
     </form>

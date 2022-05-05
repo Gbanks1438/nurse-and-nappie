@@ -4,9 +4,9 @@ class VaccinesController < ApplicationController
     end
 
     def show
-        vaccine = Vaccine.find_by_id(params[:id])
-        if vaccine
-            render json: vaccine
+        current_vaccine = Vaccine.find_by_id(params[:id])
+        if current_vaccine
+            render json: current_vaccine
         else
             render json: {error: "Vaccine not found"}, status: :not_found
         end
@@ -34,6 +34,6 @@ class VaccinesController < ApplicationController
     private
 
     def vaccine_params
-        params.permit(:date, :vaccine, :abbreviation, :dose, :method, :notes)
+        params.permit(:vax_date, :vaccine, :abbreviation, :dose, :method, :vax_notes)
     end
 end

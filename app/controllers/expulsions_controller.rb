@@ -34,6 +34,6 @@ class ExpulsionsController < ApplicationController
     private
 
     def expulsion_params
-        params.permit(:date, :movement_type, :diaper_changed, :diaper_size, :volume, :color, :consistency, :num_wipes_used)
+        params.permit(:exp_date, :movement_type, :diaper_changed, :diaper_size, :volume, :color, :consistency, :num_wipes_used)
     end
 end

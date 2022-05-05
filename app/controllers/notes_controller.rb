@@ -34,6 +34,6 @@ class NotesController < ApplicationController
     private
 
     def note_params
-        params.permit(:comments, :date)
+        params.permit(:note_date, :comments)
     end
 end

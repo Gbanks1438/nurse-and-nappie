@@ -13,8 +13,12 @@ function Home () {
             <span>If part of the line has turned blue and the diaper feels light (and may have some discoloration), but there is no visible detritus; that would be measured as Small. If most the line has turned blue and the diaper feels like it has some heft, there is both visible discoloration and detritus; that would be measured as Medium. If all of the line has turned blue and the diaper feels much heftier, there is both visible discoloration and significant detritus; that would be measured as Large. If all of the line has turned blue and the diaper is literally overflowing with detritus (a.k.a -the dreaded Blow Out); that would be measured as Very Large.</span>
         <br/><br/>
         
-        <Link to="/chart" replace>
-        <button className='view-charts-button'>View The Charts</button>
+        <Link to="/charts" replace>
+        <button className='view-charts-button'>View Charts</button>
+        </Link>
+          <br/> 
+        <Link to="/baby" replace>
+        <button className='view-baby-button'>View Baby</button>
         </Link>
         </div>
     )
