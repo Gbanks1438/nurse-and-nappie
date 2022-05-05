@@ -57,7 +57,8 @@ function Account({setUser}) {
      return (
        <div className="Update-div">
          <br />
-         <h3>Update Account</h3>
+         
+         <h2><i class="fa-solid fa-wrench"></i> Update Account:</h2>
          <form className="form-div" 
             onSubmit={handleSubmit}
                >
@@ -125,14 +126,14 @@ function Account({setUser}) {
         />
       <br/>
       <br/>
-      <button type="submit" className="Update-button">Update</button>
+      <button type="submit" className="Update-button"><i class="fa-solid fa-pencil"></i> Update</button>
     </form>
     <br /><br />
     <div className="Delete-div">
-      <h3>Delete Account</h3>
+      <h2><i class="fa-solid fa-trash"></i> Delete Account:</h2>
       <button className="Delete-button" type="submit" 
       onClick={handleDelete}
-      >DELETE MY ACCOUNT!</button>
+      ><i class="fa-solid fa-xmark"></i> DELETE MY ACCOUNT!</button>
       </div>
       <br />
          </div>

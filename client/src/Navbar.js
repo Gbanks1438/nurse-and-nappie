@@ -27,7 +27,7 @@ function Navbar({setUser}) {
                 <li className='nav-links'>
                     <NavLink to='/baby'>Baby</NavLink>
                 </li>
-                <button className="Logout-button" onClick={handleLogout}>Logout</button>
+                <button className="Logout-button" onClick={handleLogout}>Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
             </ul>
         </nav>
         <br/><br/><br/>

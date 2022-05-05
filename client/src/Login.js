@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-//import logo from './Images/welcome-mat.png';
+import logo from './Images/hu-chen-tCbTGNwrFNM-unsplash.jpg';
 
 const Login = ({setUser}) => {
 
@@ -71,8 +71,8 @@ const Login = ({setUser}) => {
       </Link>
       </div>
       <br />
-      <div>
-       {/*<img src={logo} className="App-logo" alt="logo" />*/}
+      <div className="login-background">
+       {/* <img src={logo} alt="background for log in screen" /> */}
       </div>
     </div>
   );

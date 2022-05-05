@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 // import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from 'recharts';
 
 function Chart () {
@@ -35,15 +36,111 @@ function Chart () {
     //         </LineChart>
     //       );
 
+    const [notesArray, setNotes] = useState( [] )
+    const [milestonesArray, setMilestones] = useState( [] )
+
+    useEffect( 
+        ()=>{        
+          fetch("/notes", {
+            mode: 'cors',
+            headers: {'Access-Control-Allow-Origin':'*'}
+          })
+          .then( r => r.json() )
+          .then(
+          (fetchedNotes)=>{
+          setNotes( [ ...fetchedNotes ] )
+            }
+          )
+        }
+      , [] )
+
+      const notesList = notesArray.map((note) => (
+        <div>
+        <table>
+        <thead>
+            <tr>
+                <th key={note}>Date:</th>
+                <th key={note}>Comments:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                {note.note_date}
+                </td>
+                <td>
+                {note.comments}
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        <hr />
+        </div>
+      ));
+
+      useEffect( 
+        ()=>{        
+          fetch("/milestones", {
+            mode: 'cors',
+            headers: {'Access-Control-Allow-Origin':'*'}
+          })
+          .then( r => r.json() )
+          .then(
+          (fetchedMilestones)=>{
+          setMilestones( [ ...fetchedMilestones ] )
+            }
+          )
+        }
+      , [] )
+
+      const milestonesList = milestonesArray.map((milestone) => (
+        <div>
+        <table>
+        <thead>
+            <tr>
+                <th key={milestone}>Date:</th>
+                <th key={milestone}>Weight:</th>
+                <th key={milestone}>Height:</th>
+                <th key={milestone}>Notes:</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                {milestone.ms_date}
+                </td>
+                <td>
+                {milestone.weight}
+                </td>
+                <td>
+                {milestone.height}
+                </td>
+                <td>
+                {milestone.development_notes}
+                </td>
+            </tr>
+        </tbody>
+        </table>
+        <hr />
+        </div>
+      ));
+
     return (
         <div>
-            <h1>Nursing Chart</h1>
+            
+            <h1><i class="fa-solid fa-person-breastfeeding"></i> Nursing Chart:</h1>
             <br/><br/>
-            <h1>Nappie Chart</h1>
+            <h1><i class="fa-solid fa-baby"></i> Nappie Chart:</h1>
             <br/><br/>
-            <h1>Notes</h1>
+            <h1><i class="fa-solid fa-notes-medical"></i> Notes:</h1>
+                <div className="notes-div">  
+                    {notesList}
+                </div>
             <br/><br/>
-            <h1>Milestones</h1>
+            <h1><i class="fa-solid fa-calendar-check"></i> Milestones:</h1>
+            <div className="milestones-div">  
+                    {milestonesList}
+                </div>
         </div>
     )
 }
