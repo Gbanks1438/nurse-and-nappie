@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from './Images/hu-chen-tCbTGNwrFNM-unsplash.jpg';
 
 const Login = ({setUser}) => {
 
@@ -40,9 +39,9 @@ const Login = ({setUser}) => {
 
   return (
     <div className="auth-div">
-      <h1>Log In</h1>
+      <h1>Please Log In</h1>
       <form className="form-div" onSubmit={handleSubmit}>
-        <label htmlFor="username">Username: </label>
+        <label className="form-div" htmlFor="username">Username: </label>
         <input
           id="username-input"
           type="text"
@@ -50,8 +49,7 @@ const Login = ({setUser}) => {
           value={formData.username}
           onChange={handleChange}
         />
-        <br />
-        <label htmlFor="password">Password: </label>
+        <label className="form-div" htmlFor="password">Password: </label>
         <input
           id="password-input"
           type="password"
@@ -61,19 +59,17 @@ const Login = ({setUser}) => {
         />
         <br />
         <br />
-        <button type="submit" className="Button">Submit</button>
+        <button type="submit" className="button">Submit</button>
       </form>
       <br />
       <br />
-        <div className="form-div">
-      <Link className="log-div" to="/signup" replace>
+      <br />
+        <div>
+      <Link  className="link" to="/signup" replace>
         Sign Up
       </Link>
       </div>
       <br />
-      <div className="login-background">
-       {/* <img src={logo} alt="background for log in screen" /> */}
-      </div>
     </div>
   );
 };

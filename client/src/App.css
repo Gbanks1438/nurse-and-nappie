@@ -1,0 +1,66 @@
+html {
+    background-color: #9B9892;
+    text-align: center;
+    font-size: calc(10px + 2vmin);
+  }
+  
+body {
+    background-color: chartreuse;
+}
+
+.auth-div {
+    background-image: url("./Images/hu-chen-tCbTGNwrFNM-unsplash.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 900px;
+    padding-top: 1%;
+}
+
+.home-div {
+    background-image: url("./Images/white-cloud-unsplash.jpg");
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    height: 900px;
+    padding-top: 1%;
+}
+
+.form-div {
+    padding-right: 1px;
+    padding-left: 5px;
+}
+
+.button {
+    font-weight: bold;
+    font-size: calc(14px + 2vmin);
+    background-color: #99dfff;
+}
+
+.Logout-button {
+    font-weight: bold;
+    font-size: calc(8px + 2vmin);
+    background-color: #ff99ac;
+    margin-left: 2%;
+}
+
+.link {
+    font-size: calc(8px + 2vmin);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav-links {
+    font-weight: bold;
+    font-size: calc(16px + 2vmin);
+    display: inline;
+    margin: 3%;
+}
+
+h1, h2, h3 {
+    font-weight: bold;
+    font-size: calc(16px + 2vmin);
+    text-align: center;
+    text-shadow: 2px 2px 2px #e7f7ff;
+  } 
+  

@@ -11,7 +11,7 @@ function Navbar({setUser}) {
       }
 
  return (
-        <div className="Navbar">
+        <div>
         <header>
         <nav>
             <ul>
