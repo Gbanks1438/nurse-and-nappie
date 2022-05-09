@@ -98,10 +98,10 @@ function Chart () {
         <table>
         <thead>
             <tr>
-                <th key={milestone}>Date:</th>
-                <th key={milestone}>Weight:</th>
-                <th key={milestone}>Height:</th>
-                <th key={milestone}>Notes:</th>
+                <th>Date:</th>
+                <th>Weight:</th>
+                <th>Height:</th>
+                <th>Notes:</th>
             </tr>
         </thead>
         <tbody>

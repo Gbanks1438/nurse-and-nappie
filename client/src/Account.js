@@ -64,7 +64,7 @@ function Account({setUser}) {
                >
       <label>Username:</label>
       <input
-          id="account-input"
+          id="account-input-username"
           type="text"
           name="username"
           value={formData.username}
@@ -73,7 +73,7 @@ function Account({setUser}) {
       <br/>
       <label>New Password:</label>
         <input
-          id="account-input"
+          id="account-input-password"
           type="password"
           name="password"
           value={formData.password}
@@ -82,7 +82,7 @@ function Account({setUser}) {
       <br/>
        <label>Confirm New Password:</label>
        <input
-          id="account-input"
+          id="account-input-confirmation"
           type="password_confirmation"
           name="password_confirmation"
           value={formData.password_confirmation}
@@ -91,7 +91,7 @@ function Account({setUser}) {
         <br />
         <label htmlFor="usr_first_name">First Name:</label>
         <input
-          id="account-input"
+          id="account-input-first"
           type="text"
           name="usr_first_name"
           value={formData.usr_first_name}
@@ -100,7 +100,7 @@ function Account({setUser}) {
         <br />
         <label htmlFor="usr_last_name">Last Name:</label>
         <input
-          id="account-input"
+          id="account-input-last"
           type="text"
           name="usr_last_name"
           value={formData.usr_last_name}
@@ -109,7 +109,7 @@ function Account({setUser}) {
         <br />
         <label htmlFor="email">Email Address:</label>
         <input
-          id="account-input"
+          id="account-input-email"
           type="text"
           name="email"
           value={formData.email}
@@ -118,7 +118,7 @@ function Account({setUser}) {
       <br />
       <label htmlFor="usr_profile">Profile Image:</label>
         <input
-          id="account-input"
+          id="account-input-profile"
           type="text"
           name="usr_profile"
           value={formData.usr_profile}
