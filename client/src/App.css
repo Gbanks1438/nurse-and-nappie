@@ -161,3 +161,7 @@ h1, h2, h3 {
     font-family: fantasy;
     font-size: calc(10px + 2vmin);
   }
+
+  .graph-chart {
+      margin-left: 33%;
+  }
