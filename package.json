@@ -10,7 +10,7 @@
     "deploy": "cp -a client/build/. public/",
     "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
   },
-  "dependencies": {
-    "recharts": "^2.1.9"
+  "devDependencies": {
+    "babel-plugin-recharts": "^2.0.0"
   }
 }
