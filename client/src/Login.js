@@ -39,9 +39,13 @@ const Login = ({setUser}) => {
 
   return (
     <div className="auth-div">
+      <br/>
+      <div className="form-background">
       <h1>Please Log In</h1>
-      <form className="form-div" onSubmit={handleSubmit}>
-        <label className="form-div" htmlFor="username">Username: </label>
+      <br/>
+      <br/>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="username">Username: </label>
         <input
           id="username-input"
           type="text"
@@ -49,7 +53,7 @@ const Login = ({setUser}) => {
           value={formData.username}
           onChange={handleChange}
         />
-        <label className="form-div" htmlFor="password">Password: </label>
+        <label id="login-pw-field-left" htmlFor="password">Password: </label>
         <input
           id="password-input"
           type="password"
@@ -59,13 +63,14 @@ const Login = ({setUser}) => {
         />
         <br />
         <br />
+        <br/>
+        <br/>
         <button type="submit" className="button">Submit</button>
       </form>
       <br />
       <br />
       <br />
-        <div>
-      <Link  className="link" to="/signup" replace>
+      <Link className="link" to="/signup" replace>
         Sign Up
       </Link>
       </div>

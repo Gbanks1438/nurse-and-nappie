@@ -46,9 +46,11 @@ const Signup = () => {
 
   return (
     <div className="auth-div" >
+      <br/>
+      <div className="form-background">
       <h1>Sign Up</h1>
-      <form className="form-div" onSubmit={handleSubmit}>
-      <label className="form-div" htmlFor="username">Username:</label>
+      <form onSubmit={handleSubmit}>
+      <label htmlFor="username">Username:</label>
         <input
           id="username-signup-input"
           type="text"
@@ -57,7 +59,7 @@ const Signup = () => {
           onChange={handleChange}
         />
         <br />
-        <label className="form-div" htmlFor="password">Password:</label>
+        <label htmlFor="password">Password:</label>
         <input
           id="password-signup-input"
           type="password"
@@ -66,7 +68,7 @@ const Signup = () => {
           onChange={handleChange}
         />
         <br />
-        <label className="form-div" htmlFor="password">Password Confirmation:</label>
+        <label htmlFor="password">Password Confirmation:</label>
         <input
           id="password-confirmation-signup-input"
           type="password"
@@ -75,7 +77,7 @@ const Signup = () => {
           onChange={handleChange}
         />
         <br />
-        <label className="form-div" htmlFor="first_name">First Name:</label>
+        <label htmlFor="first_name">First Name:</label>
         <input
           id="first_name-signup-input"
           type="text"
@@ -84,7 +86,7 @@ const Signup = () => {
           onChange={handleChange}
         />
         <br />
-        <label className="form-div" htmlFor="last_name">Last Name:</label>
+        <label htmlFor="last_name">Last Name:</label>
         <input
           id="last_name-signup-input"
           type="text"
@@ -93,7 +95,7 @@ const Signup = () => {
           onChange={handleChange}
         />
         <br />
-        <label className="form-div" htmlFor="email">Email Address:</label>
+        <label htmlFor="email">Email Address:</label>
         <input
           id="email-signup-input"
           type="text"
@@ -106,7 +108,6 @@ const Signup = () => {
         <button type="submit" className="button">Create Account</button>
       </form>
       <br /><br />
-      <div>
       <Link className="link" to="/" replace>
         Log In
       </Link>
