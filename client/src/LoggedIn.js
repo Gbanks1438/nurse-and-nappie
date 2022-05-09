@@ -4,7 +4,7 @@ import Routing from "./Routing";
 const LoggedIn = ({ user, setUser }) => {
   return (
     <div>
-      <h1>Logged in as: {user.username}<i class="fa-solid fa-user-check"></i></h1>
+      <h1>Hello {user.username} <i class="fa-solid fa-user-check"></i></h1>
       <Navbar setUser={setUser}/>
       <Routing setUser={setUser}/>
     </div>

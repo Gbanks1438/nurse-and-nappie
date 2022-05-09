@@ -1,6 +1,5 @@
 html {
     background-color: #9B9892;
-    text-align: center;
     font-size: calc(10px + 2vmin);
   }
   
@@ -9,6 +8,7 @@ body {
 }
 
 .auth-div {
+    text-align: center;
     background-image: url("./Images/hu-chen-tCbTGNwrFNM-unsplash.jpg");
     background-position: center;
     background-size:cover;
@@ -26,6 +26,10 @@ body {
     padding-top: 1%;
 }
 
+.update-div {
+    text-align: center;
+}
+
 #login-pw-field-left {
     padding-left: 75px;
 }
@@ -36,18 +40,50 @@ body {
     background-color: #99dfff;
 }
 
-.Logout-button {
+.chart-buttons {
+    text-align: center;
+}
+
+.left-button {
+    font-weight: bold;
+    font-size: calc(14px + 2vmin);
+    background-color: #99dfff;
+    margin: 0% 15% 1% 0%;
+}
+
+.right-button {
+    font-weight: bold;
+    font-size: calc(14px + 2vmin);
+    background-color: #99dfff;
+    margin: 0% 0% 1% 15%;
+}
+
+.logout-button {
     font-weight: bold;
     font-size: calc(8px + 2vmin);
-    background-color: #ff99ac;
+    background-color: #f62681;
+    margin-left: 2%;
+}
+
+.update-button {
+    font-weight: bold;
+    font-size: calc(8px + 2vmin);
+    background-color: chartreuse;
+    margin-left: 2%;
+}
+
+.delete-button {
+    font-weight: bold;
+    font-size: calc(8px + 2vmin);
+    background-color: red;
     margin-left: 2%;
 }
 
 .form-background {
-    background-color: #9B9892;
+    background-color: rgb(141, 145, 141, 0.7);
     padding: 10px 20px 10px 20px;
-    max-width: fit-content;
-    margin-left: 38%;
+    max-width: 40%;
+    margin-left: 30%;
 }
 
 .link {
@@ -61,28 +97,32 @@ body {
     font-size: calc(16px + 2vmin);
     display: inline;
     margin: 3%;
-    background-color: gray;
+    background-color: rgb(128, 128, 128, 0.4);
     padding: 5px 25px 5px 25px;
+}
+
+.nav-list {
+    text-align: center;
 }
 
 /* unvisited link */
 a:link {
-    color: #0096FF;
+    color: chartreuse
   }
   
   /* visited link */
   a:visited {
-    color: #ffc1cc;
+    color: #f62681;
   }
   
   /* mouse over link */
   a:hover {
-    color: #f62681;
+    color: #ffc1cc;
   }
   
   /* selected link */
   a:active {
-    color: chartreuse;
+    color: #0096FF;
   }
 
 h1, h2, h3 {
@@ -90,4 +130,34 @@ h1, h2, h3 {
     font-size: calc(16px + 2vmin);
     text-align: center;
   } 
+
+.span-left {
+    text-align: left;
+  }
+
+  table {
+    color: black;
+    font-size: calc(6px + 2vmin);
+    padding: 10px;
+    table-layout: fixed;
+    width: 100%;
+  }
   
+  th {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #FFFF88;
+    font-family: fantasy;
+  }
+  
+  td {
+    border: 1px solid black;
+    padding: 10px;
+    color: black;
+    text-shadow: 2px 2px 1px #9B9892;
+    font-weight: bold;
+    text-align: center;
+    background-color: #FFFF88;
+    font-family: fantasy;
+    font-size: calc(10px + 2vmin);
+  }

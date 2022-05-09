@@ -13,7 +13,7 @@ function Navbar({setUser}) {
  return (
         <div>
         <header>
-        <nav>
+        <nav className='nav-list'>
             <ul>
                 <li className='nav-links'>
                     <NavLink to='/account'>My Account</NavLink>
@@ -27,7 +27,7 @@ function Navbar({setUser}) {
                 <li className='nav-links'>
                     <NavLink to='/baby'>Baby</NavLink>
                 </li>
-                <button className="Logout-button" onClick={handleLogout}>Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                <button className="logout-button" onClick={handleLogout}>Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
             </ul>
         </nav>
         <br/><br/><br/>

@@ -39,7 +39,6 @@ const Login = ({setUser}) => {
 
   return (
     <div className="auth-div">
-      <br/>
       <div className="form-background">
       <h1>Please Log In</h1>
       <br/>
@@ -63,7 +62,6 @@ const Login = ({setUser}) => {
         />
         <br />
         <br />
-        <br/>
         <br/>
         <button type="submit" className="button">Submit</button>
       </form>

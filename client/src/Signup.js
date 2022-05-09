@@ -46,7 +46,6 @@ const Signup = () => {
 
   return (
     <div className="auth-div" >
-      <br/>
       <div className="form-background">
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
@@ -107,7 +106,7 @@ const Signup = () => {
         <br />
         <button type="submit" className="button">Create Account</button>
       </form>
-      <br /><br />
+      <br />
       <Link className="link" to="/" replace>
         Log In
       </Link>
