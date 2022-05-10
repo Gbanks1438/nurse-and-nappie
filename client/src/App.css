@@ -1,8 +1,8 @@
 html {
     background-color: #9B9892;
     font-size: calc(10px + 2vmin);
-  }
-  
+}
+
 body {
     background-color: #89CFF0;
 }
@@ -11,7 +11,7 @@ body {
     text-align: center;
     background-image: url("./Images/hu-chen-tCbTGNwrFNM-unsplash.jpg");
     background-position: center;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 900px;
     padding-top: 1%;
@@ -20,7 +20,7 @@ body {
 .home-div {
     background-image: url("./Images/white-cloud-unsplash.jpg");
     background-position: center;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 900px;
     padding-top: 1%;
@@ -107,50 +107,52 @@ body {
 
 /* unvisited link */
 a:link {
-    color: chartreuse
-  }
-  
-  /* visited link */
-  a:visited {
-    color: #f62681;
-  }
-  
-  /* mouse over link */
-  a:hover {
-    color: #ffc1cc;
-  }
-  
-  /* selected link */
-  a:active {
     color: #0096FF;
-  }
+}
 
-h1, h2, h3 {
+/* visited link */
+a:visited {
+    color: #f62681;
+}
+
+/* mouse over link */
+a:hover {
+    color: #FFFF00;
+}
+
+/* selected link */
+a:active {
+    color: chartreuse;
+}
+
+h1,
+h2,
+h3 {
     font-weight: bold;
     font-size: calc(16px + 2vmin);
     text-align: center;
-  } 
+}
 
 .span-left {
     text-align: left;
-  }
+}
 
-  table {
+table {
     color: black;
     font-size: calc(6px + 2vmin);
     padding: 10px;
     table-layout: fixed;
     width: 100%;
-  }
-  
-  th {
+}
+
+th {
     border: 1px solid black;
     padding: 10px;
     background-color: #FFFF88;
     font-family: fantasy;
-  }
-  
-  td {
+}
+
+td {
     border: 1px solid black;
     padding: 10px;
     color: black;
@@ -160,8 +162,14 @@ h1, h2, h3 {
     background-color: #FFFF88;
     font-family: fantasy;
     font-size: calc(10px + 2vmin);
-  }
+}
 
-  .graph-chart {
-      margin-left: 33%;
-  }
+.graph-chart {
+    margin-left: 10%;
+}
+
+.yaxis {
+    /* transform: rotate(-90deg); */
+    -webkit-transform: rotate(-90deg);
+    color: #f62681;
+}
