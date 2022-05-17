@@ -31,6 +31,11 @@ class MealsController < ApplicationController
         end
     end
 
+    def destroy
+        current_meal.destroy
+        head :no_content
+    end
+
     private
 
     def meal_params

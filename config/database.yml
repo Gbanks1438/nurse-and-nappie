@@ -83,4 +83,4 @@ production:
   <<: *default
   database: nurse_and_nappie_production
   username: nurse_and_nappie_template
-  password: <%= ENV['NURSE_AND_NAPPIE_TEMPLATE_DATABASE_PASSWORD'] %>
+  password: <%= ENV['PASSWORD'] %>

@@ -31,6 +31,11 @@ class MilestonesController < ApplicationController
         end
     end
 
+    def destroy
+        current_milestone.destroy
+        head :no_content
+    end
+
     private
 
     def milestone_params

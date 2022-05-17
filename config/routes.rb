@@ -2,16 +2,16 @@ Rails.application.routes.draw do
   # Calling resources will utilize all associated actions [:index, :show, :new, :edit, :update, :destroy]
   
   ##- NOT WORKING
-  resources :vaccines, only: [:index, :show, :new, :edit, :update]
+  resources :vaccines, only: [:index, :show, :new, :update, :destroy]
   # get "/vaccines", to: "vaccines#index"       ##500 INTERNAL SERVER ERROR
 
   #WORKING
-  resources :users
-  resources :babies, only: [:index, :show, :new, :edit, :update]
-  resources :meals, only: [:index, :show, :new, :edit, :update]
-  resources :expulsions, only: [:index, :show, :new, :edit, :update]
-  resources :milestones, only: [:index, :show, :new, :edit, :update]
-  resources :notes, only: [:index, :show, :new, :edit, :update]
+  resources :users, only: [:index, :show]
+  resources :babies, only: [:index, :show, :new, :update, :destroy]
+  resources :meals, only: [:index, :show, :new, :update, :destroy]
+  resources :expulsions, only: [:index, :show, :new, :update, :destroy]
+  resources :milestones, only: [:index, :show, :new, :update, :destroy]
+  resources :notes, only: [:index, :show, :new, :update, :destroy]
   
   #Custom Routes
   post "/login", to: "sessions#login"            #200 OK

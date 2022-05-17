@@ -35,25 +35,26 @@ function Chart() {
     , [])
 
   const notesList = notesArray.map((note) => (
-    <div>
+    <div className='notes-list'>
       <table>
         <thead>
           <tr>
-            <th key={note}>Date:</th>
             <th key={note}>Comments:</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>
-              {note.note_date}
-            </td>
-            <td>
+              # {note.id}  <hr />
+              Date: {note.note_date}  <hr />
               {note.comments}
             </td>
           </tr>
         </tbody>
       </table>
+      <button className='delete-button-rt'
+            // onClick={handleDelete}
+            >Delete</button>
       <hr />
     </div>
   ));
@@ -78,32 +79,46 @@ function Chart() {
       <table>
         <thead>
           <tr>
-            <th>Date:</th>
-            <th>Weight:</th>
-            <th>Height:</th>
-            <th>Notes:</th>
+            {/* <th className='pink_th'>Date:</th>
+            <th className='pink_th'>Weight:</th>
+            <th className='pink_th'>Height:</th> */}
+            <th className='pink_th'>Notes:</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
+            {/* <td className='pink_td'>
               {milestone.ms_date}
             </td>
-            <td>
+            <td className='pink_td'>
               {milestone.weight}
             </td>
-            <td>
+            <td className='pink_td'>
               {milestone.height}
-            </td>
-            <td>
+            </td> */}
+            <td className='pink_td'>
+              Date: {milestone.ms_date}  <hr />
+              Weight: {milestone.weight}  <hr />
+              Height: {milestone.height}  <hr />
               {milestone.development_notes}
             </td>
           </tr>
         </tbody>
       </table>
+      <button className='delete-button-rt'>Delete</button>
       <hr />
     </div>
   ));
+
+//   const handleDelete = () => {
+//     fetch(`/notes/${note.id}`, { 
+//       method: 'DELETE',
+//       headers: {
+//         'Content-type': 'application/json',
+//   },
+// })
+//     console.log('Did it delete the note?')
+//   }
 
   return (
     <div>

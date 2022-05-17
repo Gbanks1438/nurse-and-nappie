@@ -31,6 +31,11 @@ class BabiesController < ApplicationController
         end
     end
 
+    def destroy
+        current_baby.destroy
+        head :no_content
+    end
+
     private
 
     def baby_params

@@ -31,6 +31,11 @@ class NotesController < ApplicationController
         end
     end
 
+    def destroy
+        current_note.destroy
+        head :no_content
+    end
+
     private
 
     def note_params

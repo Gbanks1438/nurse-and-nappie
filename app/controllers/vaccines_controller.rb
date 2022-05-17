@@ -31,6 +31,11 @@ class VaccinesController < ApplicationController
         end
     end
 
+    def destroy
+        current_vaccine.destroy
+        head :no_content
+    end
+
     private
 
     def vaccine_params

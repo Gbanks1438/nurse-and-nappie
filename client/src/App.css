@@ -79,6 +79,12 @@ body {
     margin-left: 2%;
 }
 
+.delete-button-rt {
+    font-weight: bold;
+    font-size: calc(6px + 2vmin);
+    background-color: red;
+}
+
 .form-background {
     background-color: rgb(141, 145, 141, 0.7);
     padding: 10px 20px 10px 20px;
@@ -137,12 +143,17 @@ h3 {
     text-align: left;
 }
 
+.notes-list {
+    text-align:center;
+}
+
 table {
     color: black;
     font-size: calc(6px + 2vmin);
     padding: 10px;
     table-layout: fixed;
-    width: 100%;
+    width: 60%;
+    margin-left: 20%;
 }
 
 th {
@@ -164,12 +175,31 @@ td {
     font-size: calc(10px + 2vmin);
 }
 
+.pink_th {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #FF10F0;
+    font-family: fantasy;
+}
+
+.pink_td {
+    border: 1px solid black;
+    padding: 10px;
+    color: black;
+    text-shadow: 2px 2px 1px #9B9892;
+    font-weight: bold;
+    text-align: center;
+    background-color: #FF10F0;
+    font-family: fantasy;
+    font-size: calc(10px + 2vmin);
+}
+
 .graph-chart {
     margin-left: 10%;
 }
 
-.yaxis {
-    /* transform: rotate(-90deg); */
+/* .yaxis {
+    transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
     color: #f62681;
-}
+} */

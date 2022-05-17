@@ -31,6 +31,11 @@ class ExpulsionsController < ApplicationController
         end
     end
 
+    def destroy
+        current_expulsion.destroy
+        head :no_content
+    end
+
     private
 
     def expulsion_params
