@@ -6,8 +6,8 @@ const Signup = () => {
     username: "",
     password: "",
     password_confirmation: "",
-    first_name: "",
-    last_name: "",
+    usr_first_name: "",
+    usr_last_name: "",
     email: ""
   });
 
@@ -37,8 +37,8 @@ const Signup = () => {
             username: "",
             password: "",
             password_confirmation: "",
-            first_name: "",
-            last_name: "",
+            usr_first_name: "",
+            usr_last_name: "",
             email: ""
         });
       });
