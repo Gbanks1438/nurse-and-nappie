@@ -1,3 +1,4 @@
+import Note from './Note.js';
 import Chart from './Chart.js';
 import Home from './Home.js';
 import Baby from './Baby.js';
@@ -14,6 +15,8 @@ const Routing = ({setUser}) => {
     <Route path='/' element={<Home />} />
 
     <Route path='/charts' element={<Chart setUser={setUser}/>} />
+
+    <Route path='/notes' element={<Note setUser={setUser}/>} />
 
     <Route path='/baby' element={<Baby setUser={setUser}/>} />
     

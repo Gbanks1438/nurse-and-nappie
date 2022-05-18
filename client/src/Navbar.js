@@ -25,6 +25,9 @@ function Navbar({setUser}) {
                     <NavLink to='/charts'>Charts</NavLink>
                 </li>
                 <li className='nav-links'>
+                    <NavLink to='/notes'>Notes</NavLink>
+                </li>
+                <li className='nav-links'>
                     <NavLink to='/baby'>Baby</NavLink>
                 </li>
                 <button className="logout-button" onClick={handleLogout}>Logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>

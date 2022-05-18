@@ -83,6 +83,9 @@ body {
     font-weight: bold;
     font-size: calc(6px + 2vmin);
     background-color: red;
+    margin-left: 75%;
+    border-style: double;
+    border-color: black;
 }
 
 .form-background {
@@ -173,6 +176,8 @@ td {
     background-color: #FFFF88;
     font-family: fantasy;
     font-size: calc(10px + 2vmin);
+    text-align: left;
+
 }
 
 .pink_th {
@@ -192,6 +197,8 @@ td {
     background-color: #FF10F0;
     font-family: fantasy;
     font-size: calc(10px + 2vmin);
+    text-align: left;
+
 }
 
 .graph-chart {

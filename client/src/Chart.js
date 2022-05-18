@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis } from 'recharts';
 
 function Chart() {
 
-  const [notesArray, setNotes] = useState([])
-  const [milestonesArray, setMilestones] = useState([])
+  // const [notesArray, setNotes] = useState([])
+  // const [milestonesArray, setMilestones] = useState([])
 
   // //Sample chart data
   const expulsionData = [
@@ -19,106 +19,118 @@ function Chart() {
   ];
   // //
 
-  useEffect(
-    () => {
-      fetch("/notes", {
-        mode: 'cors',
-        headers: { 'Access-Control-Allow-Origin': '*' }
-      })
-        .then(r => r.json())
-        .then(
-          (fetchedNotes) => {
-            setNotes([...fetchedNotes])
-          }
-        )
-    }
-    , [])
+  // useEffect(
+  //   () => {
+  //     fetch("/notes", {
+  //       mode: 'cors',
+  //       headers: { 'Access-Control-Allow-Origin': '*' }
+  //     })
+  //       .then(r => r.json())
+  //       .then(
+  //         (fetchedNotes) => {
+  //           setNotes([...fetchedNotes])
+  //         }
+  //       )
+  //   }
+  //   , [])
 
-  const notesList = notesArray.map((note) => (
-    <div className='notes-list'>
-      <table>
-        <thead>
-          <tr>
-            <th key={note}>Comments:</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              # {note.id}  <hr />
-              Date: {note.note_date}  <hr />
-              {note.comments}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <button className='delete-button-rt'
-            // onClick={handleDelete}
-            >Delete</button>
-      <hr />
-    </div>
-  ));
+  // const notesList = notesArray.map((note) => (
+  //   <div className='notes-list'>
+  //     <table>
+  //       <thead>
+  //         <tr>
+  //           <th key={note}>
+  //             Comments: <button className='delete-button-rt'
+  //             // onClick={handleDelete}
+  //             >X</button></th>
+  //         </tr>
+  //       </thead>
+  //       <tbody>
+  //         <tr>
+  //           <td>
+  //             <ul>
+  //               <li>
+  //                 # {note.id}
+  //               </li>
+  //               <hr />
+  //               <li>
+  //                 Date: {note.note_date}
+  //               </li>
+  //               <hr />
+  //               <li>
+  //                 {note.comments}
+  //               </li>
+  //               <hr />
+  //             </ul>
+  //           </td>
+  //         </tr>
+  //       </tbody>
+  //     </table>
+  //     <hr />
+  //   </div>
+  // ));
 
-  useEffect(
-    () => {
-      fetch("/milestones", {
-        mode: 'cors',
-        headers: { 'Access-Control-Allow-Origin': '*' }
-      })
-        .then(r => r.json())
-        .then(
-          (fetchedMilestones) => {
-            setMilestones([...fetchedMilestones])
-          }
-        )
-    }
-    , [])
+  // useEffect(
+  //   () => {
+  //     fetch("/milestones", {
+  //       mode: 'cors',
+  //       headers: { 'Access-Control-Allow-Origin': '*' }
+  //     })
+  //       .then(r => r.json())
+  //       .then(
+  //         (fetchedMilestones) => {
+  //           setMilestones([...fetchedMilestones])
+  //         }
+  //       )
+  //   }
+  //   , [])
 
-  const milestonesList = milestonesArray.map((milestone) => (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            {/* <th className='pink_th'>Date:</th>
-            <th className='pink_th'>Weight:</th>
-            <th className='pink_th'>Height:</th> */}
-            <th className='pink_th'>Notes:</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {/* <td className='pink_td'>
-              {milestone.ms_date}
-            </td>
-            <td className='pink_td'>
-              {milestone.weight}
-            </td>
-            <td className='pink_td'>
-              {milestone.height}
-            </td> */}
-            <td className='pink_td'>
-              Date: {milestone.ms_date}  <hr />
-              Weight: {milestone.weight}  <hr />
-              Height: {milestone.height}  <hr />
-              {milestone.development_notes}
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <button className='delete-button-rt'>Delete</button>
-      <hr />
-    </div>
-  ));
+  // const milestonesList = milestonesArray.map((milestone) => (
+  //   <div>
+  //     <table>
+  //       <thead>
+  //         <tr>
+  //           <th className='pink_th'>Notes:  <button className='delete-button-rt'>X</button></th>
+  //         </tr>
+  //       </thead>
+  //       <tbody>
+  //         <tr>
+  //           <td className='pink_td'>
+  //             <ul>
+  //               <li>
+  //             Date: {milestone.ms_date}  
+  //               </li>
+  //             <hr />
+  //               <li>
+  //             Weight: {milestone.weight}  
+  //               </li>
+  //             <hr />
+  //               <li>
+  //             Height: {milestone.height}  
+  //               </li>
+  //             <hr />
+  //               <li>
+  //             {milestone.development_notes}
+  //               </li>
+  //             <hr />
+  //             </ul>
+  //           </td>
+  //         </tr>
+  //       </tbody>
+  //     </table>
+  //     <hr />
+  //   </div>
+  // ));
 
-//   const handleDelete = () => {
-//     fetch(`/notes/${note.id}`, { 
-//       method: 'DELETE',
-//       headers: {
-//         'Content-type': 'application/json',
-//   },
-// })
-//     console.log('Did it delete the note?')
-//   }
+  // //   const handleDelete = () => {
+  // //     fetch(`/notes/${note.id}`, { 
+  // //       method: 'DELETE',
+  // //       headers: {
+  // //         'Content-type': 'application/json',
+  // //   },
+  // // })
+  // //     console.log('Did it delete the note?')
+  // //   }
 
   return (
     <div>
@@ -143,7 +155,7 @@ function Chart() {
           <YAxis />
         </BarChart>
       </div>
-      <br />
+      {/* <br />
       <br />
       <br />
       <hr />
@@ -156,7 +168,7 @@ function Chart() {
       <h1><i class="fa-solid fa-calendar-check"></i> Milestones:</h1>
       <div className="milestones-div">
         {milestonesList}
-      </div>
+      </div> */}
     </div>
   )
 }
