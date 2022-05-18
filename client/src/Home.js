@@ -21,10 +21,13 @@ function Home () {
         <br/><br/>
         <div className='chart-buttons'>
         <Link to="/charts" replace>
-        <button className='left-button'><i class="fa-solid fa-chart-column"></i> View Charts</button>
+        <button className='link-button'><i class="fa-solid fa-chart-column"></i> View Charts</button>
+        </Link>
+        <Link to="/notes" replace>
+        <button className='link-button'><i class="fa-solid fa-clipboard"></i> View Notes</button>
         </Link>
         <Link to="/baby" replace>
-        <button className='right-button'><i class="fa-solid fa-child-reaching"></i> View Baby</button>
+        <button className='link-button'><i class="fa-solid fa-child-reaching"></i> View Baby</button>
         </Link>
         </div>
         </div>

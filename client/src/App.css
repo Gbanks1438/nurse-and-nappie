@@ -44,18 +44,11 @@ body {
     text-align: center;
 }
 
-.left-button {
+.link-button {
     font-weight: bold;
     font-size: calc(14px + 2vmin);
     background-color: #99dfff;
-    margin: 0% 15% 1% 0%;
-}
-
-.right-button {
-    font-weight: bold;
-    font-size: calc(14px + 2vmin);
-    background-color: #99dfff;
-    margin: 0% 0% 1% 15%;
+    margin: 0% 0% 1% 5%;
 }
 
 .logout-button {
@@ -72,6 +65,13 @@ body {
     margin-left: 2%;
 }
 
+.add-button {
+    font-weight: bold;
+    font-size: calc(8px + 2vmin);
+    background-color: chartreuse;
+    margin-left: 3%;
+}
+
 .delete-button {
     font-weight: bold;
     font-size: calc(8px + 2vmin);
@@ -83,7 +83,7 @@ body {
     font-weight: bold;
     font-size: calc(6px + 2vmin);
     background-color: red;
-    margin-left: 75%;
+    margin-left: 83%;
     border-style: double;
     border-color: black;
 }
@@ -162,7 +162,7 @@ table {
 th {
     border: 1px solid black;
     padding: 10px;
-    background-color: #FFFF88;
+    background-color: #feff9c;
     font-family: fantasy;
 }
 
@@ -173,7 +173,7 @@ td {
     text-shadow: 2px 2px 1px #9B9892;
     font-weight: bold;
     text-align: center;
-    background-color: #FFFF88;
+    background-color: #feff9c;
     font-family: fantasy;
     font-size: calc(10px + 2vmin);
     text-align: left;
@@ -183,7 +183,7 @@ td {
 .pink_th {
     border: 1px solid black;
     padding: 10px;
-    background-color: #FF10F0;
+    background-color: #ff7eb9;
     font-family: fantasy;
 }
 
@@ -194,7 +194,7 @@ td {
     text-shadow: 2px 2px 1px #9B9892;
     font-weight: bold;
     text-align: center;
-    background-color: #FF10F0;
+    background-color: #ff7eb9;
     font-family: fantasy;
     font-size: calc(10px + 2vmin);
     text-align: left;
