@@ -48,7 +48,8 @@ function Note() {
             <thead>
               <tr>
                 <th key={note}>
-                  Note #{note.id} <button className='delete-button-rt' onClick={handleNoteDelete}>X</button></th>
+                  Note #{note.id} <button className='delete-button-rt' onClick={handleNoteDelete}>X</button>
+                  </th>
               </tr>
             </thead>
             <tbody>
