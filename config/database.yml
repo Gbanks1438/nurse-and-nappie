@@ -82,5 +82,5 @@ test:
 production:
   <<: *default
   database: nurse_and_nappie_production
-  username: nurse_and_nappie_template
-  password: <%= ENV['PASSWORD'] %>
+  username: react_rails_api_project_template
+  password: <%= ENV['REACT_RAILS_API_PROJECT_TEMPLATE_DATABASE_PASSWORD'] %>

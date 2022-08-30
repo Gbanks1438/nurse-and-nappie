@@ -1,10 +1,10 @@
-Vaccine.destroy_all
-Milestone.destroy_all
-Note.destroy_all
-Expulsion.destroy_all
-Meal.destroy_all
-Baby.destroy_all
-User.destroy_all
+# Vaccine.destroy_all
+# Milestone.destroy_all
+# Note.destroy_all
+# Expulsion.destroy_all
+# Meal.destroy_all
+# Baby.destroy_all
+# User.destroy_all
 #  !!  We Destroy_all In REVERSE ORDER
 
 #Time.strptime('06/30/2012 00:00', '%m/%d/%Y %H:%M')  <---??? = --> ArgumentError: invalid date or strptime format - `02/17/2022 02:59' `%m/%d/%y %H:%M'

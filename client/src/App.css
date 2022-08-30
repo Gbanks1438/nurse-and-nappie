@@ -156,8 +156,8 @@ table {
     font-size: calc(6px + 2vmin);
     padding: 10px;
     table-layout: fixed;
-    width: 60%;
-    margin-left: 20%;
+    width: 85%;
+    margin-left: 7%;
 }
 
 th {
