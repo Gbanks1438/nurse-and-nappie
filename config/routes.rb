@@ -3,15 +3,14 @@ Rails.application.routes.draw do
   
   ##- NOT WORKING 
   resources :vaccines
-  # , only: [:index, :show, :new, :update, :destroy]
   # get "/vaccines", to: "vaccines#index"       ##500 INTERNAL SERVER ERROR
 
   #WORKING
-  resources :users, only: [:index, :show]
-  resources :babies, only: [:index, :show, :new, :update, :destroy]
-  resources :meals, only: [:index, :show, :new, :update, :destroy]
-  resources :expulsions, only: [:index, :show, :new, :update, :destroy]
-  resources :milestones, only: [:index, :show, :new, :update, :destroy]
+  resources :users
+  resources :babies
+  resources :meals
+  resources :expulsions
+  resources :milestones
   resources :notes
   # , only: [:index, :show, :new, :update, :destroy]
   

@@ -55,7 +55,7 @@ function Account({setUser}) {
       }
 
      return (
-       <div className="update-div">
+       <div className="center-align">
          <br />
          
          <h2><i class="fa-solid fa-wrench"></i> Update Account:</h2>

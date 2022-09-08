@@ -143,10 +143,10 @@ function Chart() {
                onChange={handleNursingChange}
              />
              <br />
-             <button type="submit" className="Button">Save <i class="fa-solid fa-floppy-disk"></i></button>
+             <br />
+             <button type="submit" className="update-button">Save <i class="fa-solid fa-floppy-disk"></i></button>
            </form>
         </div>
-
 
       <h1><i class="fa-solid fa-person-breastfeeding"></i>Daily Nursing Chart:</h1>
       <div className="graph-chart">
@@ -241,7 +241,7 @@ function Chart() {
              />
              <br />
              <br />
-             <button type="submit" className="Button">Save <i class="fa-solid fa-floppy-disk"></i></button>
+             <button type="submit" className="update-button">Save <i class="fa-solid fa-floppy-disk"></i></button>
            </form>
         </div>
 

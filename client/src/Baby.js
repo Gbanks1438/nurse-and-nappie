@@ -70,11 +70,16 @@ function Baby() {
     }
 
     return (
-        <div className="baby-div">
-            <h1><i class="fa-solid fa-heart-circle-exclamation"></i>Health Stats:</h1>
+        <div className="center-align">
+            <h1><i class="fa-solid fa-heart-circle-exclamation"></i> Health Stats:</h1>
+            <p>Current Age: HERE</p>
+            <p>Current Weight: HERE</p>
+            <p>Current Height: HERE</p>
+            <br />
+            <br />
             <h1><i class="fa-solid fa-notes-medical"></i> Babies:</h1>
-            <div className="babies-div">
-                <button className="add-button" onClick={() => setBabyToggle(!babyToggle)}>Create baby profile<i class="fa-solid fa-pen-to-square"></i></button>
+            <div>
+                <button className="add-button" onClick={() => setBabyToggle(!babyToggle)}>Create baby profile <i class="fa-solid fa-pen-to-square"></i></button>
                 <br />
                 {babyToggle && (
                     <div>
@@ -168,7 +173,7 @@ function Baby() {
                             />
                             <br />
                             <br />
-                            <button type="submit" className="Button">Save <i class="fa-solid fa-floppy-disk"></i></button>
+                            <button type="submit" className="update-button">Save <i class="fa-solid fa-floppy-disk"></i></button>
                         </form>
                     </div>
                 )}
