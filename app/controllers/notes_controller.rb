@@ -23,15 +23,17 @@ class NotesController < ApplicationController
     end
 
     def update
+        current_note = Note.find_by_id(params[:id])
             if current_note
                 current_note.update(note_params)
         render json: current_note
         else
-          render json: { error: "Comment not found" }, status: :not_found
+          render json: { "error": "Comment not found" }, status: :not_found
         end
     end
 
     def destroy
+        current_note = Note.find_by_id(params[:id])
         current_note.destroy
         head :no_content
     end

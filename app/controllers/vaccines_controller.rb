@@ -1,8 +1,6 @@
 class VaccinesController < ApplicationController
     def index
-        # byebug
         render json: Vaccine.all
-        # byebug
     end
 
     def show
@@ -25,6 +23,7 @@ class VaccinesController < ApplicationController
     end
 
     def update
+        current_vaccine = Vaccine.find_by_id(params[:id])
             if current_vaccine
                 current_vaccine.update(vaccine_params)
         render json: current_vaccine
@@ -34,6 +33,7 @@ class VaccinesController < ApplicationController
     end
 
     def destroy
+        current_vaccine = Vaccine.find_by_id(params[:id])
         current_vaccine.destroy
         head :no_content
     end

@@ -23,6 +23,7 @@ class BabiesController < ApplicationController
     end
 
     def update
+        current_baby = Baby.find_by_id(params[:id])
             if current_baby
                 current_baby.update(baby_params)
         render json: current_baby
@@ -32,6 +33,7 @@ class BabiesController < ApplicationController
     end
 
     def destroy
+        current_baby = Baby.find_by_id(params[:id])
         current_baby.destroy
         head :no_content
     end

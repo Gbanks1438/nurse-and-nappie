@@ -3,7 +3,7 @@ class Baby < ApplicationRecord
     has_many :expulsions, dependent: :delete_all
     has_many :notes, dependent: :delete_all
     has_many :vaccines, dependent: :delete_all
-    has_many :monthlymilestones, dependent: :delete_all
+    has_many :milestones, dependent: :delete_all
     belongs_to :user
 
     validates :b_first_name, :b_last_name, presence: true, length: { minimum: 2, maximum: 25 }

@@ -95,7 +95,7 @@ function Chart() {
 
   return (
     <div>
-         <div>
+         <div id="data-input">
          <h1>Nursing Data Input:</h1>
         <form onSubmit={handleNursingSubmit}>
            <label htmlFor="date">Start Time:</label>
@@ -156,7 +156,7 @@ function Chart() {
       <br />
       <br />
 
-      <div>
+      <div id="data-input">
          <h1>Nappie Data Input:</h1>
         <form onSubmit={handleDailySubmit}>
            <label htmlFor="date">Date:</label>

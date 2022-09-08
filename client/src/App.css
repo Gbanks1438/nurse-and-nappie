@@ -198,10 +198,12 @@ td {
     background-color: #ff7eb9;
     font-family: fantasy;
     font-size: calc(10px + 2vmin);
-    text-align: left;
-
 }
 
 .graph-chart {
     margin-left: 10%;
+}
+
+#data-input {
+    text-align: center;
 }

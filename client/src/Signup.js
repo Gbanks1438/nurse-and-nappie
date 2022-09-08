@@ -80,7 +80,7 @@ const Signup = () => {
         <input
           id="first_name-signup-input"
           type="text"
-          name="first_name"
+          name="usr_first_name"
           value={formData.first_name}
           onChange={handleChange}
         />
@@ -89,7 +89,7 @@ const Signup = () => {
         <input
           id="last_name-signup-input"
           type="text"
-          name="last_name"
+          name="usr_last_name"
           value={formData.last_name}
           onChange={handleChange}
         />

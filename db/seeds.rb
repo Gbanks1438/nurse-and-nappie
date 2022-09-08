@@ -17,6 +17,7 @@ user1= User.create(username: 'Testing', password: 'Test123$', usr_first_name: 'T
 
 puts "🌱🌱🌱 Seeding Babies…"
 baby1 = Baby.create(b_first_name: 'Mina', b_last_name: 'Banks', gender: 'Female', birth_date: Time.new(2022, 02, 17, 02, 59, 00), birth_weight: '7lbs 5oz', birth_height: '17.7in', breastfed: true, baby_profile: 'https://i.pinimg.com/originals/b2/b9/8d/b2b98db865e5ebf461cde0138821f0ec.jpg', user_id: 1)
+baby2 = Baby.create(b_first_name: 'Test', b_last_name: 'Test', gender: 'male', birth_date: Time.new(2022, 03, 17, 12, 00, 00), birth_weight: '9lbs 1oz', birth_height: '18.9in', breastfed: true, baby_profile: 'https://i.pinimg.com/originals/b2/b9/8d/b2b98db865e5ebf461cde0138821f0ec.jpg', user_id: 1)
 
 puts "🌱🌱🌱 Seeding Meals…"
 meal1 = Meal.create(time_start: Time.new(2022, 02, 17, 6, 00, 00, "-04:00"), time_end: Time.new(2022, 02, 17, 6, 10, 00, "-04:00"), which_breast: 'Left', vitamin_d: true, baby_id: 1)

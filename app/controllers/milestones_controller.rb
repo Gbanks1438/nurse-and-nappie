@@ -23,6 +23,7 @@ class MilestonesController < ApplicationController
     end
 
     def update
+        current_milestone = Milestone.find_by_id(params[:id])
             if current_milestone
                 current_milestone.update(milestone_params)
         render json: current_milestone
@@ -32,6 +33,7 @@ class MilestonesController < ApplicationController
     end
 
     def destroy
+        current_milestone = Milestone.find_by_id(params[:id])
         current_milestone.destroy
         head :no_content
     end

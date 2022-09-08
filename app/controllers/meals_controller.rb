@@ -23,6 +23,7 @@ class MealsController < ApplicationController
     end
 
     def update
+        current_meal = Meal.find_by_id(params[:id])
             if current_meal
                 current_meal.update(meal_params)
         render json: current_meal
@@ -32,6 +33,7 @@ class MealsController < ApplicationController
     end
 
     def destroy
+        current_meal = Meal.find_by_id(params[:id])
         current_meal.destroy
         head :no_content
     end

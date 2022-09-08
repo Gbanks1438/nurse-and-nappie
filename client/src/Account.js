@@ -20,7 +20,7 @@ function Account({setUser}) {
     
     const userCreds = { ...formData };
     
-    fetch("/users/{user.id}", {
+    fetch("/signup", {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

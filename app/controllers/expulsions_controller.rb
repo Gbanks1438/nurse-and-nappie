@@ -23,6 +23,7 @@ class ExpulsionsController < ApplicationController
     end
 
     def update
+        current_expulsion = Expulsion.find_by_id(params[:id])
             if current_expulsion
                 current_expulsion.update(expulsion_params)
         render json: current_expulsion
@@ -32,6 +33,7 @@ class ExpulsionsController < ApplicationController
     end
 
     def destroy
+        current_expulsion = Expulsion.find_by_id(params[:id])
         current_expulsion.destroy
         head :no_content
     end

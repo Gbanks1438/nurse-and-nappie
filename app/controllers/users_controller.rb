@@ -25,6 +25,7 @@ class UsersController < ApplicationController
     end
 
     def update
+        current_user = User.find_by_id(params[:id])
             if current_user
                 current_user.update(user_params)
         render json: current_user
@@ -34,6 +35,7 @@ class UsersController < ApplicationController
     end
 
     def destroy
+        current_user = User.find_by_id(params[:id])
             current_user.destroy
             head :no_content
     end
