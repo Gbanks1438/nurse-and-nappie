@@ -61,14 +61,9 @@ function Vaccine() {
       ));
 
     return (
-        <div>
-            <h1><i class="fa-solid fa-syringe"></i> Vaccines:</h1>
             <div className="vaccines-div">  
                     {vaccinesList}
                 </div>
-        <br/>
-    
-    </div>
 )
 };
 

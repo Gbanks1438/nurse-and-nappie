@@ -58,7 +58,6 @@ function BabyCard({ aBaby }) {
                     </tr>
                 </tbody>
             </table>
-
             <button
                 onClick={handleBabyDelete}
                 className="delete-button">

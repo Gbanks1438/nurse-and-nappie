@@ -71,12 +71,6 @@ function Baby() {
 
     return (
         <div className="center-align">
-            <h1><i class="fa-solid fa-heart-circle-exclamation"></i> Health Stats:</h1>
-            <p>Current Age: HERE</p>
-            <p>Current Weight: HERE</p>
-            <p>Current Height: HERE</p>
-            <br />
-            <br />
             <h1><i class="fa-solid fa-notes-medical"></i> Babies:</h1>
             <div>
                 <button className="add-button" onClick={() => setBabyToggle(!babyToggle)}>Create baby profile <i class="fa-solid fa-pen-to-square"></i></button>
@@ -112,7 +106,6 @@ function Baby() {
                                 onChange={handleBabyChange}
                             />
                             <br />
-                            <br />
                             <label htmlFor="birthday">Birthday:</label>
                             <input
                                 id="birthday-input"
@@ -121,7 +114,6 @@ function Baby() {
                                 value={babyData.birth_date}
                                 onChange={handleBabyChange}
                             />
-                            <br />
                             <br />
                             <label htmlFor="weight">Birth Weight:</label>
                             <input
@@ -132,7 +124,6 @@ function Baby() {
                                 onChange={handleBabyChange}
                             />
                             <br />
-                            <br />
                             <label htmlFor="height">Birth Height:</label>
                             <input
                                 id="height-input"
@@ -141,7 +132,6 @@ function Baby() {
                                 value={babyData.birth_height}
                                 onChange={handleBabyChange}
                             />
-                            <br />
                             <br />
                             <label htmlFor="breastfed">Breastfed?</label>
                             <input
@@ -152,7 +142,6 @@ function Baby() {
                                 onChange={handleBabyChange}
                             />
                             <br />
-                            <br />
                             <label htmlFor="profile pic">Profile Picture:</label>
                             <input
                                 id="profile-input"
@@ -161,7 +150,6 @@ function Baby() {
                                 value={babyData.baby_profile}
                                 onChange={handleBabyChange}
                             />
-                            <br />
                             <br />
                             <label htmlFor="user_id">User:</label>
                             <input
@@ -177,7 +165,7 @@ function Baby() {
                         </form>
                     </div>
                 )}
-                <br />
+     
             </div>
             <br />
             {babiesArray.map((aBaby) => {
@@ -191,8 +179,92 @@ function Baby() {
                 )
             })}
             <br />
-            {/* <Vaccine /> */}
             <br />
+            <h1><i class="fa-solid fa-heart-circle-exclamation"></i> Health Stats:</h1>
+            <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Baby ID:</th>
+                        <th>First Name:</th>
+                        <th>Last Name:</th>
+                        <th>Current Age:</th>
+                        <th>Current Weight:</th>
+                        <th>Current Height:</th>
+                        <th>Profile Image:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            {/* {aBaby.id} */}
+                        </td>
+                        <td>
+                            {/* {aBaby.b_first_name} */}
+                        </td>
+                        <td>
+                            {/* {aBaby.b_last_name} */}
+                        </td>
+                        <td>
+                        {/* figure out how to make code to use the birth date and the current time to solve for age */}
+                        </td>
+                        <td>
+                           {/* figure out where to get this info from or how to change database */}
+                        </td>
+                        <td>
+                            {/* figure out where to get this info from or how to change database */}
+                        </td>
+                        <td>
+                            {/* {aBaby.baby_profile} */}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <br />
+            <br />
+            <h1><i class="fa-solid fa-syringe"></i> Vaccines:</h1>
+            {/* <Vaccine /> */}
+            <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Baby ID:</th>
+                        <th>Date Administered:</th>
+                        <th>Name:</th>
+                        <th>Abbreviation:</th>
+                        <th>Dose:</th>
+                        <th>Method:</th>
+                        <th>Notes:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                           {/* figure out where to get this info from or how to change database */}
+                        </td>
+                        <td>
+                            {/* figure out where to get this info from or how to change database */}
+                        </td>
+                        <td>
+                             {/* figure out where to get this info from or how to change database */}
+                        </td>
+                        <td>
+                        {/* figure out where to get this info from or how to change database */}
+                        </td>
+                        <td>
+                           {/* figure out where to get this info from or how to change database */}
+                        </td>
+                        <td>
+                            {/* figure out where to get this info from or how to change database */}
+                        </td>
+                        <td>
+                           {/* figure out where to get this info from or how to change database */}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         </div>
     )
 };
