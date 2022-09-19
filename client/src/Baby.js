@@ -70,13 +70,13 @@ function Baby() {
     }
 
     return (
-        <div className="center-align">
+        <div>
             <h1><i class="fa-solid fa-notes-medical"></i> Babies:</h1>
             <div>
                 <button className="add-button" onClick={() => setBabyToggle(!babyToggle)}>Create baby profile <i class="fa-solid fa-pen-to-square"></i></button>
                 <br />
                 {babyToggle && (
-                    <div>
+                    <div className="center-align">
                         <h2>Enter Your information Below</h2>
                         <form onSubmit={handleBabySubmit}>
                             <label htmlFor="f-name">First Name:</label>
@@ -241,7 +241,7 @@ function Baby() {
                 <tbody>
                     <tr>
                         <td>
-                           {/* figure out where to get this info from or how to change database */}
+                            {/* {aBaby.id} */}
                         </td>
                         <td>
                             {/* figure out where to get this info from or how to change database */}

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_27_182243) do
+ActiveRecord::Schema.define(version: 2022_09_14_142105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -100,10 +100,24 @@ ActiveRecord::Schema.define(version: 2022_04_27_182243) do
     t.index ["baby_id"], name: "index_vaccines_on_baby_id"
   end
 
+  create_table "vaccs", force: :cascade do |t|
+    t.time "date"
+    t.string "vaccine"
+    t.string "abbreviation"
+    t.string "dose"
+    t.string "method"
+    t.string "notes"
+    t.bigint "baby_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["baby_id"], name: "index_vaccs_on_baby_id"
+  end
+
   add_foreign_key "babies", "users"
   add_foreign_key "expulsions", "babies"
   add_foreign_key "meals", "babies"
   add_foreign_key "milestones", "babies"
   add_foreign_key "notes", "babies"
   add_foreign_key "vaccines", "babies"
+  add_foreign_key "vaccs", "babies"
 end

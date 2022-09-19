@@ -60,7 +60,7 @@ function BabyCard({ aBaby }) {
             </table>
             <button
                 onClick={handleBabyDelete}
-                className="delete-button">
+                className="right-delete">
                 Delete
             </button>
         </div>

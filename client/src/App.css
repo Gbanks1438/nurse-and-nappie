@@ -30,6 +30,13 @@ body {
     text-align: center;
 }
 
+.right-delete {
+    font-weight: bold;
+    font-size: calc(8px + 2vmin);
+    background-color: red;
+    margin-left: 85%;
+}
+
 #login-pw-field-left {
     padding-left: 75px;
 }
@@ -148,7 +155,7 @@ h4 {
 }
 
 .notes-list {
-    text-align:center;
+    text-align: center;
 }
 
 table {

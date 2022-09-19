@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :vaccs
   # Calling resources will utilize all associated actions [:index, :show, :new, :edit, :update, :destroy]
   
   ##- NOT WORKING 
@@ -12,7 +13,6 @@ Rails.application.routes.draw do
   resources :expulsions
   resources :milestones
   resources :notes
-  # , only: [:index, :show, :new, :update, :destroy]
   
   #Custom Routes
   post "/login", to: "sessions#login"            #200 OK
