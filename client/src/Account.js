@@ -17,10 +17,10 @@ function Account({setUser}) {
 
   function toggleGenderColor() {
     const toggleEffect = document.getElementById("gender");
-if(toggleEffect.innerHTML=="Baby Boy blue"){
-  toggleEffect.innerHTML="Princess Pink";}
+if(toggleEffect.innerHTML=="Princess Pink"){
+  toggleEffect.innerHTML="Baby Boy blue";}
 else{
-  toggleEffect.innerHTML="Baby Boy Blue";}
+  toggleEffect.innerHTML="Princess Pink";}
 }
   
   function handleSubmit(e) {
@@ -65,7 +65,7 @@ else{
      return (
        <div className="center-align">
         <div>
-          <p id="gender">Baby Boy blue</p>
+          <p id="gender">Princess Pink</p>
           <label id="gender-toggle" class="switch">
             <input type="checkbox"
             onClick={toggleGenderColor}/>
