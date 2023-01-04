@@ -1,6 +1,6 @@
-# Vacc.destroy_all
+# Vaccs.destroy_all
 # Vaccine.destroy_all
-# Milestone.destroy_all
+# MonthlyMilestone.destroy_all
 # Note.destroy_all
 # Expulsion.destroy_all
 # Meal.destroy_all
@@ -51,14 +51,7 @@ vaccine6 = Vaccine.create(vax_date: Time.new(2022, 04, 25, 13, 30, 00, "-04:00")
 vaccine7 = Vaccine.create(vax_date: Time.new(2022, 04, 25, 13, 30, 00, "-04:00"), vaccine: 'Inactivated Poliovirus', abbreviation: 'IPV', dose: '1st', method: 'Intramuscular Thigh', vax_notes: 'Administered as Pentacel combination vaccine.', baby_id: 1)
 vaccine8 = Vaccine.create(vax_date: Time.new(2022, 04, 25, 13, 30, 00, "-04:00"), vaccine: 'Pneumococcal Conjugate', abbreviation: 'PCV13', dose: '1st', method: 'Intramuscular Thigh', vax_notes: 'Swaddled the baby and fed her with breastmilk to sooth the pain.', baby_id: 1)
 
-puts "🌱🌱🌱 Seeding Vaccs…"
-vacc1 = Vacc.create(vax_date: Time.new(2022, 02, 17, 6, 00, 00, "-04:00"), vaccine: 'Phenylketonuria', abbreviation: 'PKU', dose: '1st', method: 'Subcutaneous Injection', vax_notes: 'Standard newborn Heel Stick Test.', baby_id: 1)
-vacc2 = Vacc.create(vax_date: Time.new(2022, 02, 17, 6, 05, 00, "-04:00"), vaccine: 'Hepatitis B', abbreviation: 'HepB', dose: '1st', method: 'Intramuscular Thigh', vax_notes: 'Swaddled the baby and fed her with breastmilk to sooth the pain.', baby_id: 1)
-vacc3 = Vacc.create(vax_date: Time.new(2022, 04, 25, 13, 20, 00, "-04:00"), vaccine: 'Hepatitis B', abbreviation: 'HepB', dose: '2nd', method: 'Intramuscular Thigh', vax_notes: 'Swaddled the baby and fed her with breastmilk to sooth the pain.', baby_id: 1)
-vacc4 = Vacc.create(vax_date: Time.new(2022, 04, 25, 13, 25, 00, "-04:00"), vaccine: 'Rotavirus', abbreviation: 'RV1', dose: '1st', method: 'Oral Administration', vax_notes: 'Mina swallowed the solution without significant regurgitation.', baby_id: 1)
-vacc5 = Vacc.create(vax_date: Time.new(2022, 04, 25, 13, 30, 00, "-04:00"), vaccine: 'Diphtheria, Tetanus, & Acellular Pertussis', abbreviation: 'DTaP', dose: '1st', method: 'Intramuscular Thigh', vax_notes: 'Administered as Pentacel combination vaccine.', baby_id: 1)
-vacc6 = Vacc.create(vax_date: Time.new(2022, 04, 25, 13, 30, 00, "-04:00"), vaccine: 'Haemophilus Influenzae Type B', abbreviation: 'Hib', dose: '1st', method: 'Intramuscular Thigh', vax_notes: 'Administered as Pentacel combination vaccine.', baby_id: 1)
-vacc7 = Vacc.create(vax_date: Time.new(2022, 04, 25, 13, 30, 00, "-04:00"), vaccine: 'Inactivated Poliovirus', abbreviation: 'IPV', dose: '1st', method: 'Intramuscular Thigh', vax_notes: 'Administered as Pentacel combination vaccine.', baby_id: 1)
-vacc8 = Vacc.create(vax_date: Time.new(2022, 04, 25, 13, 30, 00, "-04:00"), vaccine: 'Pneumococcal Conjugate', abbreviation: 'PCV13', dose: '1st', method: 'Intramuscular Thigh', vax_notes: 'Swaddled the baby and fed her with breastmilk to sooth the pain.', baby_id: 1)
+puts "🌱🌱🌱 Seeding Vacc Test…"
+vacc1 = Vacc.create(date: Time.new(2022, 02, 17, 6, 00, 00, "-04:00"), vaccine: 'Test', abbreviation: 'TEST', dose: 'test', method: 'Test', notes: 'Test', baby_id: 1)
 
 puts "🪴🪴🪴 Seeding Completed ✅"

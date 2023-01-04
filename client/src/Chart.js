@@ -1,7 +1,7 @@
 import DailyNappie from './DailyNappie';
 import DailyNurse from './DailyNurse';
 import MonthlyNappie from './MonthlyNappie';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Chart() {
 
@@ -91,7 +91,25 @@ function Chart() {
           baby_id: ""
         });
       });
+    }
+
+      const [expulsionsArray, setExpulsions] = useState( [] )
+
+     useEffect( 
+        ()=>{   
+    fetch("/expulsions", {
+      mode: 'cors',
+      headers: {'Access-Control-Allow-Origin':'*'}
+    })
+    .then( r => r.json() )
+    .then(
+    (fetchedExpulsions)=>{
+    setExpulsions( [ ...fetchedExpulsions ] )
+      }, console.log(expulsionsArray)
+    )
   }
+, []
+)
 
   return (
     <div>
@@ -121,7 +139,7 @@ function Chart() {
                id="meals-input"
                type="text"
                name=" which_breast"
-               value={mealsFormData. which_breast}
+               value={mealsFormData.which_breast}
                onChange={handleNursingChange}
              />
              <br />

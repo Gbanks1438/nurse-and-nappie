@@ -1,9 +1,9 @@
 class VaccinesController < ApplicationController
-    # def index
-    #     # byebug
-    #     render json: Vaccine.all
-    #     # byebug
-    # end
+    def index
+        # byebug
+        render json: Vaccine.all
+        # byebug
+    end
 
     def show
         current_vaccine = Vaccine.find_by_id(params[:id])

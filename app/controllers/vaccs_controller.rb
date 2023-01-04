@@ -43,6 +43,6 @@ class VaccsController < ApplicationController
     private
 
     def vacc_params
-        params.permit(:vax_date, :vaccine, :abbreviation, :dose, :method, :vax_notes)
+        params.permit(:date, :vaccine, :abbreviation, :dose, :method, :notes)
     end
 end

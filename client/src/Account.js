@@ -14,6 +14,14 @@ function Account({setUser}) {
       [e.target.name]: e.target.value,
     });
   };
+
+  function toggleGenderColor() {
+    const toggleEffect = document.getElementById("gender");
+if(toggleEffect.innerHTML=="Baby Boy blue"){
+  toggleEffect.innerHTML="Princess Pink";}
+else{
+  toggleEffect.innerHTML="Baby Boy Blue";}
+}
   
   function handleSubmit(e) {
     e.preventDefault();
@@ -56,8 +64,15 @@ function Account({setUser}) {
 
      return (
        <div className="center-align">
+        <div>
+          <p id="gender">Baby Boy blue</p>
+          <label id="gender-toggle" class="switch">
+            <input type="checkbox"
+            onClick={toggleGenderColor}/>
+            <span class="slider round"></span>
+          </label>
+          </div>
          <br />
-         
          <h2><i class="fa-solid fa-wrench"></i> Update Account:</h2>
          <form className="form-div" 
             onSubmit={handleSubmit}
