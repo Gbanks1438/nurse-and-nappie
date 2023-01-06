@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import BabyCard from './BabyCard.js'
+import HealthCard from './HealthCard.js'
 // import Vaccine from './Vaccine.js'
 
 function Baby() {
@@ -68,6 +69,8 @@ function Baby() {
                 });
             });
     }
+
+    console.log(babyData.b_first_name)
 
     return (
         <div>
@@ -181,6 +184,20 @@ function Baby() {
             <br />
             <br />
             <h1><i class="fa-solid fa-heart-circle-exclamation"></i> Health Stats:</h1>
+            
+            <br />
+            {babiesArray.map((theBaby) => {
+                return (
+                    <div>
+                        <HealthCard
+                            key={theBaby.id} // For React
+                            theBaby={theBaby} // For Us
+                        />
+                    </div>
+                )
+            })}
+            <br />
+
             <div>
             <table>
                 <thead>
@@ -197,10 +214,10 @@ function Baby() {
                 <tbody>
                     <tr>
                         <td>
-                            {/* {aBaby.id} */}
+                            ?
                         </td>
                         <td>
-                            {/* {aBaby.b_first_name} */}
+                            {/* {babyData} */}
                         </td>
                         <td>
                             {/* {aBaby.b_last_name} */}
@@ -221,6 +238,7 @@ function Baby() {
                 </tbody>
             </table>
         </div>
+
         <br />
             <br />
             <h1><i class="fa-solid fa-syringe"></i> Vaccines:</h1>
