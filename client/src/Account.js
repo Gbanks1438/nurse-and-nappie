@@ -2,6 +2,11 @@ import { useState } from 'react';
 
 function Account({setUser}) {
 
+  function toggleTheme() {
+    const background = document.body;
+      background.classList.toggle("alt-theme");
+    }
+
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -14,14 +19,6 @@ function Account({setUser}) {
       [e.target.name]: e.target.value,
     });
   };
-
-  function toggleGenderColor() {
-    const toggleEffect = document.getElementById("gender");
-if(toggleEffect.innerHTML=="Princess Pink"){
-  toggleEffect.innerHTML="Baby Boy blue";}
-else{
-  toggleEffect.innerHTML="Princess Pink";}
-}
   
   function handleSubmit(e) {
     e.preventDefault();
@@ -64,15 +61,6 @@ else{
 
      return (
        <div className="center-align">
-        <div>
-          <p id="gender">Princess Pink</p>
-          <label id="gender-toggle" class="switch">
-            <input type="checkbox"
-            onClick={toggleGenderColor}/>
-            <span class="slider round"></span>
-          </label>
-          </div>
-         <br />
          <h2><i class="fa-solid fa-wrench"></i> Update Account:</h2>
          <form className="form-div" 
             onSubmit={handleSubmit}
@@ -151,6 +139,15 @@ else{
       ><i class="fa-solid fa-xmark"></i> DELETE MY ACCOUNT!</button>
       </div>
       <br />
+      <br />
+          <h2>Account Theme</h2>
+          <label class="switch">
+            <input type="checkbox"
+            onClick={toggleTheme}/>
+            <span class="slider round"></span>
+          </label>
+          <br />
+          <br />
          </div>
     );
 

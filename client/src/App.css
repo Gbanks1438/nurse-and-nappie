@@ -1,5 +1,4 @@
 html {
-    background-color: #9B9892;
     font-size: calc(10px + 2vmin);
 }
 
@@ -238,7 +237,7 @@ td {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: pink;
+    background-color: #1DA1F2;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -256,11 +255,11 @@ td {
   }
   
   input:checked + .slider {
-    background-color: #2196F3;
+    background-color:palevioletred;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px palevioletred;
   }
   
   input:checked + .slider:before {
@@ -276,4 +275,8 @@ td {
   
   .slider.round:before {
     border-radius: 50%;
+  }
+
+  .alt-theme {
+    background-color: pink;
   }
