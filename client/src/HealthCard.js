@@ -1,7 +1,14 @@
-function HealthCard({ theBaby }) {
+function HealthCard({ theBaby, talleyMs}) {
+console.log(talleyMs)
 
-    return (
-                  
+    function ageCalc(bday) { 
+        const age_diff = Date.now() - bday.getTime();
+        const date = new Date(age_diff); 
+      
+        return Math.abs(date.getUTCFullYear() - 1970);
+    }
+
+    return (         
         <div>
         <table>
             <thead>
@@ -18,7 +25,7 @@ function HealthCard({ theBaby }) {
             <tbody>
                 <tr>
                     <td>
-                        ?
+                    {theBaby.id}
                     </td>
                     <td>
                         {theBaby.b_first_name}
@@ -27,13 +34,13 @@ function HealthCard({ theBaby }) {
                         {theBaby.b_last_name}
                     </td>
                     <td>
-                        ?
-                    {/* figure out how to make code to use the birth date and the current time to solve for age */}
+                    ?
+                    {/* {ageCalc} */}
+                
                     </td>
                     <td>
-                        ?
-                       {/* figure out where to get this info from or how to change database */}
-                    </td>
+                    ?
+                       </td>
                     <td>
                         ?
                         {/* figure out where to get this info from or how to change database */}

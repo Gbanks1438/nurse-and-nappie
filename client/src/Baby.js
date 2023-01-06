@@ -197,48 +197,6 @@ function Baby() {
                 )
             })}
             <br />
-
-            <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Baby ID:</th>
-                        <th>First Name:</th>
-                        <th>Last Name:</th>
-                        <th>Current Age:</th>
-                        <th>Current Weight:</th>
-                        <th>Current Height:</th>
-                        <th>Profile Image:</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            ?
-                        </td>
-                        <td>
-                            {/* {babyData} */}
-                        </td>
-                        <td>
-                            {/* {aBaby.b_last_name} */}
-                        </td>
-                        <td>
-                        {/* figure out how to make code to use the birth date and the current time to solve for age */}
-                        </td>
-                        <td>
-                           {/* figure out where to get this info from or how to change database */}
-                        </td>
-                        <td>
-                            {/* figure out where to get this info from or how to change database */}
-                        </td>
-                        <td>
-                            {/* {aBaby.baby_profile} */}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
         <br />
             <br />
             <h1><i class="fa-solid fa-syringe"></i> Vaccines:</h1>
