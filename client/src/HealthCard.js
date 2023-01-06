@@ -2,16 +2,16 @@ function HealthCard({theBaby
     // , milestoneArray
 }) {
 
-    function newestMs() {
+    // function newestMs() {
         // GET THE ARRAY
-    }
+    // }
 
     // function ageCalc() { 
   
-        const dob = new Date('February 17, 2022 03:01:00');
-        const today = new Date();
-        const monthsDiff = today.getMonth() - dob.getMonth() + (12 * (today.getFullYear() - dob.getFullYear()));
-        const el = document.getElementById("age-el");
+        // const dob = new Date('February 17, 2022 03:01:00');
+        // const today = new Date();
+        // const monthsDiff = today.getMonth() - dob.getMonth() + (12 * (today.getFullYear() - dob.getFullYear()));
+        // const el = document.getElementById("age-el");
         // el.textContent = monthsDiff + " months old";
     // }
 

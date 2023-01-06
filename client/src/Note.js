@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import NoteCard from "./NoteCard";
 import MilestoneCard from "./MilestoneCard";
-import HealthCard from "./MilestoneCard";
+// import HealthCard from "./MilestoneCard";
 
 function Note() {
 

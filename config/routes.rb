@@ -22,7 +22,6 @@ Rails.application.routes.draw do
   get "/me", to: "users#index"                   #200 OK
   delete "/me", to: "users#destroy"              #204 NO CONTENT
 
-
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }

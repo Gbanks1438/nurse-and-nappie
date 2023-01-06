@@ -93,9 +93,9 @@ function Chart() {
       });
     }
 
-      const [expulsionsArray, setExpulsions] = useState( [] )
+    const [expulsionsArray, setExpulsions] = useState( [] )
 
-     useEffect( 
+    useEffect( 
         ()=>{   
     fetch("/expulsions", {
       mode: 'cors',
@@ -108,7 +108,8 @@ function Chart() {
       }, console.log(expulsionsArray)
     )
   }
-, []
+, [expulsionsArray]
+//or should it be an empty array []?
 )
 
   return (
