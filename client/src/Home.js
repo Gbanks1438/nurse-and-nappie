@@ -7,8 +7,6 @@ function Home () {
 	document.body.style.textFocus = textFocus += 0.5;
   }
   
-// document.addEventListener('DOMContentLoaded', () => {
-
     return (
         <div className="home-div">
           <div className="span-left">

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import NoteCard from "./NoteCard";
 import MilestoneCard from "./MilestoneCard";
-import HealthCard from './HealthCard';
+import HealthCard from "./MilestoneCard";
 
 function Note() {
 
@@ -235,14 +235,14 @@ function Note() {
             {milestoneArray.map((aMilestone) => {
               return (
                 <div>
-                      <HealthCard 
-                            key={aMilestone.id} // For React
-                            talleyMs={aMilestone} // For Us
-                        />
                         <MilestoneCard
                             key={aMilestone.id} // For React
                             aMilestone={aMilestone} // For Us
                         />
+                        {/* <HealthCard
+                            key={aMilestone.id} // For React
+                            milestoneArray={milestoneArray} // For Us
+                        /> */}
                     </div>
                 )
             })}

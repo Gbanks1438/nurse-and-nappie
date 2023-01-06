@@ -2,7 +2,7 @@ import Navbar from "./Navbar.js";
 import Routing from "./Routing";
 
 const LoggedIn = ({ user, setUser }) => {
-    console.log("What is user?" , user)
+    // console.log("What is user?" , user)
 
   return (
     <div>

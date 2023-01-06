@@ -1,12 +1,19 @@
-function HealthCard({ theBaby, talleyMs}) {
-console.log(talleyMs)
+function HealthCard({theBaby
+    // , milestoneArray
+}) {
 
-    function ageCalc(bday) { 
-        const age_diff = Date.now() - bday.getTime();
-        const date = new Date(age_diff); 
-      
-        return Math.abs(date.getUTCFullYear() - 1970);
+    function newestMs() {
+        // GET THE ARRAY
     }
+
+    // function ageCalc() { 
+  
+        const dob = new Date('February 17, 2022 03:01:00');
+        const today = new Date();
+        const monthsDiff = today.getMonth() - dob.getMonth() + (12 * (today.getFullYear() - dob.getFullYear()));
+        const el = document.getElementById("age-el");
+        // el.textContent = monthsDiff + " months old";
+    // }
 
     return (         
         <div>
@@ -33,17 +40,18 @@ console.log(talleyMs)
                     <td>
                         {theBaby.b_last_name}
                     </td>
-                    <td>
-                    ?
-                    {/* {ageCalc} */}
+                    <td id="age-el">
+                    {/* {el.textContent = monthsDiff + " months old"} */}
+                    {/* {ageCalc()} */}
                 
                     </td>
                     <td>
                     ?
+                    {/* {newestMs.weight} */}
                        </td>
                     <td>
                         ?
-                        {/* figure out where to get this info from or how to change database */}
+                        {/* {newestMs.height} */}
                     </td>
                     <td>
                         {theBaby.baby_profile}

@@ -61,6 +61,15 @@ function Account({setUser}) {
 
      return (
        <div className="center-align">
+         <h2>Account Theme</h2>
+          <label class="switch">
+            <input type="checkbox"
+            onClick={toggleTheme}/>
+            <span class="slider round"></span>
+          </label>
+          <br />
+          <br />
+          <br />
          <h2><i class="fa-solid fa-wrench"></i> Update Account:</h2>
          <form className="form-div" 
             onSubmit={handleSubmit}
@@ -140,14 +149,6 @@ function Account({setUser}) {
       </div>
       <br />
       <br />
-          <h2>Account Theme</h2>
-          <label class="switch">
-            <input type="checkbox"
-            onClick={toggleTheme}/>
-            <span class="slider round"></span>
-          </label>
-          <br />
-          <br />
          </div>
     );
 

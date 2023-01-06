@@ -70,8 +70,6 @@ function Baby() {
             });
     }
 
-    console.log(babyData.b_first_name)
-
     return (
         <div>
             <h1><i class="fa-solid fa-notes-medical"></i> Babies:</h1>
