@@ -2,11 +2,13 @@ import {Link} from 'react-router-dom';
 
 function Home () {
 
-  // const el = document.getElementsByClassName("zoom");
-  // const el = document.getElementById("test");
-  // el.addEventListener('mouseover', (event) => {
-  //   event.target.style.fontWeight = "bolder"
-  // });
+//   const goBold = document.getElementById("test");
+// // console.log(goBold); //null because the page hasnt loaded by the time it tries to assign {goBold}
+
+// goBold.addEventListener("mouseenter", (event) => {
+//   event.target.style.fontWeight = "bolder";
+// }
+// );
 
     return (
         <div className="home-div">
@@ -17,11 +19,11 @@ function Home () {
             <h5>Estimating the volume of a baby's movement:</h5>
             <span>The volume estimation is a bit arbitrary in terms of a standard, so it's up to you to decide what Small, Medium, Large, and Very Large really mean. Diapers should often have a built in yelow line that turns blue when there is absorbed liquid, which is the first way of measuring volume. Additionally, you will measure based on the perceived weight and visual volume it contains.</span>
             <h3>Examples:</h3>
-            <ul id='test'>
-              <li>If part of the line has turned blue and the diaper feels light (and may have some discoloration), but there is no visible detritus; that would be measured as Small.</li>
-              <li>If most the line has turned blue and the diaper feels like it has some heft, there is both visible discoloration and detritus; that would be measured as Medium.</li>
-              <li>If all of the line has turned blue and the diaper feels much heftier, there is both visible discoloration and significant detritus; that would be measured as Large.</li>
-              <li>If all of the line has turned blue and the diaper is literally overflowing with detritus (a.k.a -the dreaded Blow Out); that would be measured as Very Large.</li>
+            <ul id="test">
+              <li>Part of the line has turned blue, diaper feels light (and may have some discoloration), no visible detritus - measured as Small</li>
+              <li>Most the line has turned blue, diaper feels like it has some heft, visible discoloration and detritus - measured as Medium</li>
+              <li>All of the line has turned blue, diaper feels heavy, visible discoloration and significant detritus - measured as Large</li>
+              <li>All of the line has turned blue, the diaper is overflowing with detritus (a.k.a -the dreaded Blow Out) - measured as Very Large.</li>
             </ul>
             </div>
         <br/><br/>
