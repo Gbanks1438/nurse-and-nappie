@@ -238,6 +238,8 @@ function Baby() {
                     </tr>
                 </tbody>
             </table>
+            <br />
+            <br />
         </div>
         </div>
     )
