@@ -2,13 +2,14 @@ import {Link} from 'react-router-dom';
 
 function Home () {
 
-//   const goBold = document.getElementById("test");
-// // console.log(goBold); //null because the page hasnt loaded by the time it tries to assign {goBold}
+    // const goBold = document.getElementById("test");
+    // console.log(goBold); //null because the page hasnt loaded by the time it tries to assign {goBold}
+    
+    // goBold.addEventListener("mouseenter", (event) => {
+    // event.target.style.fontWeight = "bolder";
+    // }
+    // );
 
-// goBold.addEventListener("mouseenter", (event) => {
-//   event.target.style.fontWeight = "bolder";
-// }
-// );
 
     return (
         <div className="home-div">

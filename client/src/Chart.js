@@ -105,7 +105,8 @@ function Chart() {
     .then(
     (fetchedExpulsions)=>{
     setExpulsions( [ ...fetchedExpulsions ] )
-      }, console.log(expulsionsArray)
+      }, 
+      // console.log(expulsionsArray) //infinite loop happening
     )
   }
 , [expulsionsArray]
