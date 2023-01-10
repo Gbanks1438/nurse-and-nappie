@@ -1,11 +1,24 @@
+/* * */
 html {
     font-size: calc(10px + 2vmin);
 }
 
+/* * */
 body {
     background-color: #89CFF0;
 }
 
+/* * */
+h1,
+h2,
+h3, 
+h4 {
+    font-weight: bold;
+    font-size: calc(16px + 2vmin);
+    text-align: center;
+}
+
+/* Login */
 .auth-div {
     text-align: center;
     background-image: url("./Images/hu-chen-tCbTGNwrFNM-unsplash.jpg");
@@ -16,6 +29,34 @@ body {
     padding-top: 1%;
 }
 
+/* Login */
+#login-pw-field-left {
+    padding-left: 75px;
+}
+
+/* Login & Signup */
+.button {
+    font-weight: bold;
+    font-size: calc(14px + 2vmin);
+    background-color: #99dfff;
+}
+
+/* Login & Signup */
+.form-background {
+    background-color: rgb(141, 145, 141, 0.7);
+    padding: 10px 20px 10px 20px;
+    max-width: 40%;
+    margin-left: 30%;
+}
+
+/* Login & Signup */
+.link {
+    font-size: calc(8px + 2vmin);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Home */
 .home-div {
     background-image: url("./Images/white-cloud-unsplash.jpg");
     background-position: center;
@@ -27,31 +68,12 @@ body {
     padding-right: 5%;
 }
 
-.center-align {
+/* Home */
+.redirect-buttons {
     text-align: center;
 }
 
-.right-delete {
-    font-weight: bold;
-    font-size: calc(8px + 2vmin);
-    background-color: red;
-    margin-left: 85%;
-}
-
-#login-pw-field-left {
-    padding-left: 75px;
-}
-
-.button {
-    font-weight: bold;
-    font-size: calc(14px + 2vmin);
-    background-color: #99dfff;
-}
-
-.chart-buttons {
-    text-align: center;
-}
-
+/* Home */
 .link-button {
     font-weight: bold;
     font-size: calc(14px + 2vmin);
@@ -59,13 +81,35 @@ body {
     margin: 0% 0% 1% 5%;
 }
 
-.logout-button {
-    font-weight: bold;
-    font-size: calc(8px + 2vmin);
-    background-color: #f62681;
-    margin-left: 2%;
+/* Home */
+.span-left {
+    text-align: left;
 }
 
+/* Chart */
+.graph-chart {
+    margin-left: 10%;
+}
+
+/* Chart */
+#data-input {
+    text-align: center;
+}
+
+/* Account, Baby & Note */
+.center-align {
+    text-align: center;
+}
+
+/* BabyCard */
+.right-delete {
+    font-weight: bold;
+    font-size: calc(8px + 2vmin);
+    background-color: red;
+    margin-left: 85%;
+}
+
+/* Account, Baby, Chart & Note */
 .update-button {
     font-weight: bold;
     font-size: calc(8px + 2vmin);
@@ -73,13 +117,7 @@ body {
     margin-left: 2%;
 }
 
-.add-button {
-    font-weight: bold;
-    font-size: calc(8px + 2vmin);
-    background-color: chartreuse;
-    margin-left: 3%;
-}
-
+/* Account, MilestoneCard & NoteCard */
 .delete-button {
     font-weight: bold;
     font-size: calc(8px + 2vmin);
@@ -87,6 +125,42 @@ body {
     margin-left: 2%;
 }
 
+/* Baby & Note */
+.add-button {
+    font-weight: bold;
+    font-size: calc(8px + 2vmin);
+    background-color: chartreuse;
+    margin-left: 3%;
+}
+
+
+/* MilestoneCard */
+.pink_th {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #ff7eb9;
+    font-family: fantasy;
+}
+
+/* MilestoneCard */
+.pink_td {
+    border: 1px solid black;
+    padding: 10px;
+    color: black;
+    text-shadow: 2px 2px 1px #9B9892;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ff7eb9;
+    font-family: fantasy;
+    font-size: calc(10px + 2vmin);
+}
+
+/* NoteCard */
+.notes-list {
+    text-align: center;
+}
+
+/* MilestoneCard & NoteCard */
 .delete-button-rt {
     font-weight: bold;
     font-size: calc(6px + 2vmin);
@@ -96,19 +170,15 @@ body {
     border-color: black;
 }
 
-.form-background {
-    background-color: rgb(141, 145, 141, 0.7);
-    padding: 10px 20px 10px 20px;
-    max-width: 40%;
-    margin-left: 30%;
-}
-
-.link {
-    font-size: calc(8px + 2vmin);
+/* Navbar */
+.logout-button {
     font-weight: bold;
-    text-decoration: none;
+    font-size: calc(8px + 2vmin);
+    background-color: #f62681;
+    margin-left: 2%;
 }
 
+/* Navbar */
 .nav-links {
     font-weight: bold;
     font-size: calc(16px + 2vmin);
@@ -118,47 +188,32 @@ body {
     padding: 5px 25px 5px 25px;
 }
 
+/* Navbar */
 .nav-list {
     text-align: center;
 }
 
-/* unvisited link */
+/* Navbar unvisited link */
 a:link {
     color: #0096FF;
 }
 
-/* visited link */
+/* Navbar visited link */
 a:visited {
     color: #f62681;
 }
 
-/* mouse over link */
+/* Navbar mouse over link */
 a:hover {
     color: #FFFF00;
 }
 
-/* selected link */
+/* Navbar selected link */
 a:active {
     color: chartreuse;
 }
 
-h1,
-h2,
-h3, 
-h4 {
-    font-weight: bold;
-    font-size: calc(16px + 2vmin);
-    text-align: center;
-}
-
-.span-left {
-    text-align: left;
-}
-
-.notes-list {
-    text-align: center;
-}
-
+/* Baby, BabyCard, Chart, HealthCard, MilestoneCard, Note Card & Vaccine */
 table {
     color: black;
     font-size: calc(6px + 2vmin);
@@ -168,6 +223,8 @@ table {
     margin-left: 7%;
 }
 
+/* Account, App, Baby, BabyCard, Chart, DailyNappie, DailyNurse, HealthCard, Home, LoggedOut */
+/* Login, MilestoneCard, MonthlyNappie, Navbar, Note, Note Card, Signup & Vaccine */
 th {
     border: 1px solid black;
     padding: 10px;
@@ -175,6 +232,7 @@ th {
     font-family: fantasy;
 }
 
+/* Baby, BabyCard, Chart, HealthCard, MilestoneCard, Note Card & Vaccine */
 td {
     border: 1px solid black;
     padding: 10px;
@@ -189,34 +247,10 @@ td {
 
 }
 
-.pink_th {
-    border: 1px solid black;
-    padding: 10px;
-    background-color: #ff7eb9;
-    font-family: fantasy;
-}
+/* --------------------------------------------------------------------------------------- */
 
-.pink_td {
-    border: 1px solid black;
-    padding: 10px;
-    color: black;
-    text-shadow: 2px 2px 1px #9B9892;
-    font-weight: bold;
-    text-align: center;
-    background-color: #ff7eb9;
-    font-family: fantasy;
-    font-size: calc(10px + 2vmin);
-}
-
-.graph-chart {
-    margin-left: 10%;
-}
-
-#data-input {
-    text-align: center;
-}
-
-/* The switch - the box around the slider */
+/* * * The switch * * */
+/* The box around the slider */
 .switch {
     position: relative;
     display: inline-block;

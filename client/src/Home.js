@@ -28,7 +28,7 @@ function Home () {
             </ul>
             </div>
         <br/><br/>
-        <div className='chart-buttons'>
+        <div className='redirect-buttons'>
         <Link to="/charts" replace>
         <button className='link-button'><i class="fa-solid fa-chart-column"></i> View Charts</button>
         </Link>
