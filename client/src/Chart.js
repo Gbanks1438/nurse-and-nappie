@@ -44,7 +44,7 @@ function Chart() {
 
     const expo = { ...setDailyFormData };
     
-    fetch(`/expulsions/${expo.id}`, {
+    fetch('/expulsions', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -72,8 +72,8 @@ function Chart() {
     e.preventDefault(e);
 
     const nurse = { ...setMealsFormData };
-    
-    fetch(`/expulsions/${nurse.id}`, {
+    console.log(nurse);
+    fetch('/meals', {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -136,22 +136,32 @@ function Chart() {
                onChange={handleNursingChange}
              />
              <br />
-             <label htmlFor="baby_id">Which Side?</label>
-             <input
+             <label htmlFor="baby_id">Left Breast</label>
+              <input
                id="meals-input"
-               type="text"
-               name=" which_breast"
+               type="radio"
+               name="Select Breast"
+               value={mealsFormData.which_breast}
+               onChange={handleNursingChange}
+             />
+               <label htmlFor="baby_id">Right Breast</label>
+              <input
+               id="meals-input"
+               type="radio"
+               name="Select Breast"
                value={mealsFormData.which_breast}
                onChange={handleNursingChange}
              />
              <br />
              <label htmlFor="baby_id">Vitamin D?</label>
+             
              <input
                id="meals-input"
-               type="boolean"
+               type="checkbox"
                name="vitamin_d"
                value={mealsFormData.vitamin_d}
                onChange={handleNursingChange}
+               
              />
              <br />
              <label htmlFor="baby_id">Baby Id:</label>

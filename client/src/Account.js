@@ -5,6 +5,8 @@ function Account({setUser}) {
   function toggleTheme() {
     const background = document.body;
       background.classList.toggle("alt-theme");
+      // setUser(background) // WRONG but playing around!  
+      //What can I add to the session to store this as a preference?
     }
 
   const [formData, setFormData] = useState({
