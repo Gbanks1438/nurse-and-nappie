@@ -25,6 +25,11 @@ function Chart() {
     baby_id: ""
   });  
 
+  const checkTicker = () => {
+    const checker = document.getElementById("vit-checkbox").value;
+    alert("The value of the checkbox is: " + checker);
+      }
+
   const handleDailyChange = (e) => {
     setDailyFormData({
       ...dailyFormData,
@@ -42,7 +47,7 @@ function Chart() {
   function handleDailySubmit(e) {
     e.preventDefault(e);
 
-    const expo = { ...setDailyFormData };
+    const expo = { ...dailyFormData };
     
     fetch('/expulsions', {
       method: "POST",
@@ -71,7 +76,7 @@ function Chart() {
   function handleNursingSubmit(e) {
     e.preventDefault(e);
 
-    const nurse = { ...setMealsFormData };
+    const nurse = { ...mealsFormData };
     console.log(nurse);
     fetch('/meals', {
       method: "POST",
@@ -136,45 +141,37 @@ function Chart() {
                onChange={handleNursingChange}
              />
              <br />
-             <label htmlFor="baby_id">Left Breast</label>
+             <label htmlFor="baby_id">Which Side?</label>
               <input
                id="meals-input"
-               type="radio"
-               name="Select Breast"
-               value={mealsFormData.which_breast}
-               onChange={handleNursingChange}
-             />
-               <label htmlFor="baby_id">Right Breast</label>
-              <input
-               id="meals-input"
-               type="radio"
-               name="Select Breast"
+               type="text"
+               name="which_breast"
+               placeholder="Enter Left or Right" 
                value={mealsFormData.which_breast}
                onChange={handleNursingChange}
              />
              <br />
              <label htmlFor="baby_id">Vitamin D?</label>
-             
              <input
-               id="meals-input"
+               id="vit-checkbox"
                type="checkbox"
                name="vitamin_d"
                value={mealsFormData.vitamin_d}
                onChange={handleNursingChange}
-               
+               unchecked
              />
              <br />
              <label htmlFor="baby_id">Baby Id:</label>
              <input
                id="daily-input"
                type="number"
-               name="volume"
-               value={mealsFormData.volume}
+               name="baby_id"
+               value={mealsFormData.baby_id}
                onChange={handleNursingChange}
              />
              <br />
              <br />
-             <button type="submit" className="update-button">Save <i class="fa-solid fa-floppy-disk"></i></button>
+             <button type="submit" className="update-button" onClick={checkTicker}>Save <i class="fa-solid fa-floppy-disk"></i></button>
            </form>
         </div>
 
